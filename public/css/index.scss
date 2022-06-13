@@ -1,0 +1,1941 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;300;400;500;600;700;800;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+.body-site {	
+  font-family: "Lexend", sans-serif;
+}
+
+.main-site {
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+}
+
+.special {
+  // color: #e6bc27 !important;
+  animation: special 2s infinite;
+}
+
+.searchbar {
+	display: flex;
+	justify-content: end;
+}
+
+@keyframes special {
+  50% {
+    color: #e6bc27;
+  }
+  100% {
+    color: #f5f5f5;
+  }
+}
+
+.content-wrap {
+  flex: 1;
+}
+.line {
+  content: "";
+  height: 8px;
+  display: block;
+  padding: 4px;
+  background-color: #fff;
+  width: 100px;
+  border-radius: 20px;
+  margin: 5px auto;
+}
+.button {
+  position: relative;
+  background: #383838;
+  display: inline-block;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 30px;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: 0.2s ease-in;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: #e6bc27;
+  }
+}
+
+.button-login {
+	font-size: 14px;
+	border-radius: 6px;
+}
+
+.popup-close-btn {
+  background: #bf0707;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 12px;
+}
+
+.fluid {
+  max-width: 100%;
+}
+
+.skpp {
+	background: none;
+	outline: none;
+	border: none;
+	color: #3f59c5;
+
+	&:hover {
+		color: #28397c;
+		text-decoration: underline;
+	}
+}
+
+// .container {
+//   max-width: 1140px;
+//   margin: 0 auto;
+// }
+
+// NAVBAR
+.nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  // background: #bf0707;
+  background: #bf0707;
+  color: white;
+  // box-shadow: 0px 1px 7px #999;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  .navLink {
+    li {
+      display: inline-block;
+      padding: 0px 0px;
+      text-decoration: none;
+      a {
+        text-decoration: none;
+        &:hover {
+          color: #2c2929;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+    img {
+      width: 100px;
+    }
+  }
+
+.popup-modal,
+.ReactModalPortal {
+  position: sticky;
+  width: 70%;
+  margin: auto;
+  // top: 25%;
+  // left: 25%;
+  border: none;
+  outline: none;
+  // margin-top: -100px;
+  // margin-left: -180px;
+  z-index: 100;
+  // background-color: rgba(58, 58, 58, 0.726);
+}
+
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 2000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.billboards {
+  h2,
+  p,
+  a {
+    color: #f5f5f5;
+    text-align: center;
+    font-weight: 500;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+.billboards-mobile {
+  display: none;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// .dropdown {
+//   text-decoration: none;
+//   .dropbtn {
+//     font-size: inherit;
+//     border: none;
+//     outline: none;
+//     background-color: inherit;
+//     font-family: inherit;
+//     margin: 0;
+//     padding: 12px 16px;
+//     text-align: center;
+//     &:hover {
+//       color: #2c2929;
+//     }
+//   }
+//   .dropdown-content {
+//     background: #bf0707;
+//     display: none;
+//     position: absolute;
+//     z-index: 1;
+//     // box-shadow: 0px 12px 8px 0px rgba(0,0,0,0.2);
+//     a {
+//       display: block;
+//       text-align: left;
+//       padding: 12px;
+//       font-weight: 400;
+//       font-size: 15px;
+//     }
+//   }
+// }
+// .dropdown:hover .dropdown-content {
+//   display: block;
+//   padding: 10px 0;
+// }
+// .content {
+//   max-width: 1000px;
+//   margin: 40px auto;
+//   padding: 20px;
+// }
+
+// FOOTER
+.global-footer {
+  position: relative;
+//   bottom: 0;
+  width: 100%;
+  padding: 25px 60px;
+  background: #fff;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  color: #a2a2a3;
+  font-size: 80%;
+  font-weight: 400;
+  box-shadow: 0px 1px 7px #999;
+  z-index: 10;
+  p {
+	margin: 0;
+  }
+  .author {
+	  display: none;
+  }
+}
+
+// BERANDA
+.jumbotron {
+  position: relative;
+  margin-top: -77px;
+  min-height: 90vh;
+  background: url(../img/samsat-gedung.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  filter: blur(3px);
+}
+
+.jumbotron-title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 100%;
+  background: rgba(220, 221, 225, 0.5);
+  h1 {
+    font-size: 3rem;
+    color: #333;
+	font-weight: 600;
+  }
+  h2 {
+	font-size: 1.5em;
+    font-weight: 500;
+  }
+}
+
+.jumbotron-logo-top {
+  position: absolute;
+  top: 10%;
+  // left: 52%;
+  // transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo-right {
+    display: flex;
+    .logo-right-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .logo-right,
+  .logo-left {
+    margin: 0 30px;
+    img {
+      margin: 0 10px;
+    }
+  }
+  .logo-size {
+    width: 95px;
+  }
+}
+
+.maskot {
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  margin-top: -275px;
+  width: 100%;
+  justify-content: space-between;
+  .gubernur {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 400px;
+    }
+  }
+  .penda {
+    display: flex;
+    justify-content: center;
+    // margin-right: -30px;
+    img {
+      width: 430px;
+    }
+  }
+  .aldo {
+    width: 330px;
+    margin-right: -50px;
+  }
+  .hani {
+    width: 272px;
+  }
+  img {
+    display: block;
+    margin: auto 40px;
+    z-index: 9;
+  }
+}
+.greetings {
+  display: none;
+}
+
+.apps-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+  }
+  .apps-box {
+    max-width: 350px;
+    cursor: pointer;
+    padding: 20px 30px;
+    margin: -70px 20px 15px 20px;
+    background: #fff;
+    z-index: 9;
+    border-radius: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 1px 7px #999;
+    h3 {
+		font-size: 1.17em;
+      	color: #bf0707;
+    }
+    &:hover {
+      background: #bf0707;
+      color: #fff;
+      h3 {
+        color: #fff;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    .sambara-web {
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    .sambara-mobile {
+      width: 90px;
+      display: block;
+      margin: 0 auto;
+      padding: 5px 0;
+    }
+  }
+}
+
+.slog {
+  padding: 20px;
+  margin: 20px;
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    font-style: italic;
+    span {
+      color: #bf0707 !important;
+    }
+  }
+}
+
+.gray-bg {
+  background: #f5f5f5;
+}
+
+.blue-bg {
+  background: #bf0707;
+  h2,
+  p,
+  h3,
+  a,
+  li {
+    color: white;
+  }
+}
+
+.w30 {
+  width: 40%;
+}
+.w70 {
+  width: 60%;
+}
+.w50 {
+  width: 50%;
+}
+.w100 {
+  width: 100%;
+}
+
+.logo-160 {
+	width: 159px;
+	display: block;
+	margin: auto;
+}
+
+
+.carousel {
+  width: 90%;
+  margin: 30px auto;
+  .sr-only {
+    color: white;
+  }
+  .carousel-control-next {
+    flex-direction: row-reverse;
+  }
+}
+
+.content-row {
+  display: flex;
+  justify-content: center;
+  min-height: 50vh;
+  padding: 50px;
+  .vertical-auto {
+    margin: auto 0;
+  }
+  .box-icon {
+    padding: 10px 0;
+    .icon-mobil {
+      width: 380px;
+    }
+    img {
+      display: block;
+      margin: auto;
+      width: 250px;
+    }
+    .samling,
+    .samdong {
+      h2 {
+        text-align: center;
+        font-style: italic;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      .white-outline {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        font-size: 4rem;
+        color: white;
+      }
+    }
+    .samling {
+      h2 {
+        color: #2e973c;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #2e973c;
+      }
+    }
+    .samdong {
+      h2 {
+        margin-left: 70px;
+        color: #223788;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: #223788;
+      }
+    }
+  }
+  .even {
+    text-align: right;
+    h2 {
+      color: #3d485e;
+    }
+  }
+  .deskripsi {
+    padding: 20px 15px;
+    .small {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    h2 {
+      letter-spacing: 4px;
+      font-size: 3rem;
+    }
+    p {
+      letter-spacing: 2px;
+      font-weight: 300;
+      padding: 20px 0;
+      font-size: 2rem;
+    }
+  }
+}
+
+.header {
+  margin: 20px 10px;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #bf0707;
+  }
+}
+.sub-header {
+  margin: 20px 10px;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #bf0707;
+    text-align: center;
+  }
+}
+
+// Layanan
+.pajak-tahunan {
+  padding: 20px 10px;
+  margin: 10px 0;
+  h3 {
+    text-align: center;
+  }
+}
+.layanan-row {
+  margin: 0 auto;
+  padding: 5px 10px;
+  .box-layanan {
+    display: flex;
+    height: 130px;
+    justify-content: center;
+  }
+  .nomor {
+    background: #333;
+    width: 10%;
+    p {
+      color: #a2a2a3;
+      padding: 35px 20px;
+      margin: auto 0;
+      text-align: center;
+      font-size: 3rem;
+    }
+  }
+  .layanan-langkah {
+    background: #bf0707;
+    width: 60%;
+    p {
+      padding: 50px 20px;
+      margin: auto 0;
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+  .keterangan-langkah {
+    width: 25%;
+    background: #f5f5f5;
+    padding: 20px;
+    ul {
+      margin: auto 5px;
+      li {
+        list-style: decimal;
+        margin: auto 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// PROFILE
+.struktur-header {
+  margin: 20px 10px;
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #bf0707;
+  }
+}
+.struktur-content-row {
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  h4,
+  p {
+    text-align: center;
+  }
+  h4 {
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  p {
+    margin: 4px 0;
+    font-size: 13px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 300px;
+  }
+}
+.struktur-content-row2 {
+  padding-top: 20px;
+  justify-content: center;
+  align-items: center;
+  h4,
+  p {
+    text-align: center;
+  }
+  h4 {
+    margin: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  p {
+    margin: 4px 0;
+    font-size: 13px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .bagan-card {
+    // padding: 42px;
+    margin: 0 auto;
+  }
+}
+
+.visi-misi {
+  margin: 30px auto;
+  padding: 10px 30px;
+  width: 80%;
+  .visi-misi-header {
+    color: #333;
+    h2 {
+      font-weight: 800;
+    }
+  }
+  h2,
+  h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px;
+  }
+  p {
+    font-weight: 400;
+  }
+  li,
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+  }
+  li {
+    padding: 10px 0;
+    margin: 10px;
+  }
+  .visi {
+    background: #ac0606;
+    // background: rgba(25, 42, 86, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    box-shadow: 0px 1px 7px #999;
+    h3 {
+      color: #fff;
+    }
+    p {
+      text-align: center;
+      padding: 5px;
+      margin: 5px 0;
+      color: #fff;
+      span {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+  .misi {
+    margin: 15px 0;
+    background: #e42222;
+    // background: rgba(64, 115, 158, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    box-shadow: 0px 1px 7px #999;
+    h3,
+    p {
+      color: #fff;
+    }
+    span {
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+}
+
+.box {
+  margin: 8px;
+  padding: 8px;
+  .row {
+    h3 {
+      font-weight: 500;
+    }
+    .list {
+      ul {
+        li {
+          list-style: none;
+          border-left: 3px solid #bf0707;
+          padding: 8px 10px;
+        }
+      }
+    }
+    p {
+      font-size: 1.1rem;
+    }
+    a {
+      margin: 30px 10px;
+    }
+    ul {
+      margin: 5px;
+      li {
+        list-style: decimal;
+        margin: 5px 20px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// JADWAL
+.jadwal-box,
+.e-samsat {
+  padding: 15px;
+  margin: 15px 5px;
+  .jadwal-header,
+  .e-samsat-header {
+    h2,
+    h3,
+    p {
+      margin: 10px 0;
+    }
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #bf0707;
+    }
+    h3 {
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 25px 0;
+    }
+    li {
+      list-style-type: decimal;
+      margin: 10px 20px;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    span {
+      font-weight: 600;
+    }
+    .syarat-ketentuan-header {
+      margin: 15px 0;
+      padding: 10px 20px;
+      background: #bf0707;
+      h2 {
+        color: white;
+      }
+    }
+    .syarat-dan-ketentuan {
+      display: flex;
+      margin: -20px 0 10px 0;
+      padding: 20px 20px;
+      background: #bf0707;
+      h3,
+      p,
+      li {
+        color: white;
+      }
+      p,
+      li {
+        font-weight: 300;
+      }
+      .syarat {
+        margin-left: 30px;
+      }
+    }
+  }
+  .jadwal-title {
+    padding: 10px 20px;
+    margin: 10px 0;
+    text-align: center;
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+  .jadwal-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+    // border: 1px solid black;
+    .jadwal-hari {
+      background: #bf0707;
+      width: 40%;
+      padding: 30px 20px;
+      h3 {
+        color: white;
+      }
+    }
+    .jadwal-wt {
+      width: 60%;
+      padding: 30px 20px;
+      background: #f5f5f5;
+    }
+  }
+}
+
+// E-Samsat
+.e-samsat-content {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+  .keuntungan-tsamsat {
+    ul {
+      li {
+        list-style: decimal;
+        padding: 5px;
+        margin: 5px;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .button-to {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    a {
+      text-decoration: underline;
+    }
+    .feature-btn {
+      width: 216px;
+      font-size: 15px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+  }
+  .highlight {
+    border-left: 5px solid #bf0707;
+    background: #f5f5f5;
+    padding: 3px 0;
+    p {
+      margin-left: 15px;
+    }
+  }
+  h3 {
+    color: #bf0707;
+    padding: 10px 0;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 10px 25px 10px 0;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+.syarat-ketentuan-header {
+  margin: 25px 0 10px 0;
+  padding: 10px 20px;
+  background: #bf0707;
+  h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    color: white;
+    font-weight: 600;
+  }
+}
+.syarat-dan-ketentuan {
+  display: flex;
+  margin: -20px 0 10px 0;
+  padding: 20px 20px;
+  background: #bf0707;
+  h3,
+  p,
+  li {
+    color: white;
+  }
+  p,
+  li {
+    font-weight: 300;
+  }
+  li {
+    list-style-type: decimal;
+    margin: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .syarat {
+    margin-left: 30px;
+  }
+}
+
+// WILAYAH KERJA
+.wilayah-kerja-title {
+  margin: 20px 15px 10px 15px;
+  padding: 10px 10px;
+  p,
+  h1 {
+    margin-top: 10px;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 25px 0 5px 0;
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.kecamatan {
+  .kecamatan-box {
+    padding: 10px 30px;
+    .kecamatan-title {
+      background: #bf0707;
+      padding: 20px 10px;
+      cursor: pointer;
+      h2 {
+        padding: 5px 10px;
+        border-left: 5px solid white;
+        color: rgb(255, 255, 255);
+        font-size: 1.5rem;
+        font-weight: 600;
+        &:hover {
+          color: rgb(190, 190, 190);
+          border-left-color: gray;
+        }
+      }
+    }
+    .desa-list {
+      display: block;
+      padding: 20px 10px;
+      margin: 0 15px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        li {
+          border-left: 3px solid #bf0707;
+          margin: 15px 10px;
+          padding: 15px 25px;
+          list-style: none;
+          width: 20%;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+// Pengaduan
+.site-aduan {
+	position: relative;
+  z-index: 1;
+  margin-top: -73px;
+	background: #1A1919C2;
+	padding: 30px;
+	min-height: inherit;
+
+	.aduan {
+		max-width: 700px;
+    width: 90%;
+    margin: 70px auto 30px;
+    border-radius: 24px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 20px 35px;
+
+		.aduan-header {
+			.title {
+				color: #ac0606;
+			}
+		}
+	}
+}
+
+.pengaduan, .detail-pt {
+  padding: 15px;
+  margin: 15px 5px;
+  .pengaduan-header {
+    padding: 10px;
+    margin: 10px 0;
+    h2 {
+      color: #bf0707;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+  }
+  .pengaduan-content {
+    padding-top: 10px;
+    margin-top: 5px;
+    .pengaduan-desc {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin: 0 10px;
+    }
+    .pengaduan-kontak {
+      padding: 10px;
+      margin: 5px;
+      .row-kontak {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px;
+        span {
+          padding: 0 10px;
+          margin: 0 10px;
+        }
+        .phone {
+          font-size: 42px;
+        }
+        p {
+          margin: auto 0;
+        }
+      }
+    }
+  }
+
+	.card-pgd {
+		border: 2px solid #B3B7C63D;
+		border-radius: 10px;
+		// box-shadow: 0px 16px 56px rgba(0, 0, 0, 0.06);
+		cursor: pointer;
+
+		&:hover {
+			// background: rgb(227, 227, 227);
+			box-shadow: 0px 16px 56px rgba(0, 0, 0, 0.10);
+
+			p {
+					// text-decoration: underline;
+					color: #ac0606;
+			}
+		}
+	}
+
+	.tanggapan {
+		width: 85%;
+		margin-left: auto;
+		margin-right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+	}
+}
+
+// Login
+.form-signin {
+	font-family: "Mulish", sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: #363740;
+
+	.content-login {
+		padding: 10px 35px 35px 35px;
+		background: #fff;
+		border-radius: 10px;
+	}
+
+	.content-login-body {
+		margin-top: 40px;
+	}
+}
+
+// Home Footer
+.home-footer {
+  .home-footer-head {
+    margin: 15px auto;
+    padding: 10px;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 200px;
+    }
+    h3 {
+      text-align: center;
+      color: #3d485e;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+    }
+  }
+  .home-footer-info {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    .row-info {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      hr {
+        height: 25px;
+        margin: auto 0;
+        border: 0.05rem solid #e0e0e0;
+      }
+      p {
+        filter: invert(1);
+        margin: 5px 0;
+      }
+      a {
+        margin: 5px 5px;
+        filter: invert(1);
+        text-decoration: none;
+        transition: 0.2s ease-in;
+        &:hover {
+          color: black;
+          // border-bottom: 0.05rem solid black;
+        }
+        svg {
+          width: 25px;
+          height: 20px;
+        }
+      }
+      ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin: 0 25px;
+          padding: 10px 0;
+        }
+      }
+    }
+    .alamat {
+      flex-direction: column;
+      p {
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.text-gray {
+	color: #A4A6B3;
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.image-container {
+  display: flex;
+  justify-content: center !important;
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+}
+.image-container .image {
+  width: 100%;
+  max-height: 100%;
+  margin: 0px;
+}
+.prev:hover,
+.next:hover {
+  background-color: black;
+}
+.dot-container {
+  text-align: center;
+}
+.dot {
+  position: inherit;
+  top: -40px;
+  height: 8px;
+  width: 36px;
+  background-color: #bbb;
+  border-radius: 0px;
+  display: inline-block;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.active,
+.dot:hover {
+  background-color: #555;
+}
+.fade {
+  animation: fade 0.3s ease-in-out;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.triple-untung {
+  margin: 10px 0;
+  p {
+    margin: 10px 0;
+  }
+  img {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 1225px) {
+//   .nav {
+//     padding: 0 30px;
+//     li {
+//       font-size: 13px;
+//     }
+//     .dropbtn {
+//       padding: 12px 8px;
+//     }
+//     a {
+//       padding: 0 8px;
+//     }
+//   }
+
+  // .apps-box{
+  // 	margin: -150px 20px 15px 20px !important;
+  // }
+
+  .maskot {
+    .aldo {
+      width: 280px;
+    }
+    .hani {
+      width: 222px;
+    }
+    img {
+      margin: auto 0;
+    }
+  }
+
+  .triple-untung {
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+	.nav {
+		width: 100%;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+@media screen and (max-width: 960px) {
+//   .nav {
+//     padding: 0 10px;
+    // li {
+    //   font-size: 12px;
+    // }
+    // a {
+    //   padding: 0 4px;
+    // }
+    // .dropbtn {
+    //   padding: 12px 4px;
+    // }
+//   }
+
+  .maskot {
+    .gubernur {
+      img {
+        width: 350px;
+        margin-top: -50px;
+      }
+    }
+    .penda {
+      img {
+        width: 330px;
+      }
+    }
+  }
+
+  .jumbotron-logo-top {
+    .logo-left {
+      img {
+        width: 150px;
+      }
+    }
+    img {
+      width: 60px;
+    }
+    .logo-size {
+      width: 60px;
+    }
+  }
+
+  .jumbotron-title {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .apps-box {
+    padding: 20px !important;
+    h3 {
+      font-size: 0.9rem;
+    }
+    .sambara-web {
+      max-width: 150px;
+    }
+    .sambara-mobile {
+      max-width: 45px;
+    }
+  }
+
+  .box-icon {
+    h2 {
+      font-size: 2.4rem !important;
+    }
+  }
+
+  .deskripsi {
+    h2 {
+      font-size: 2rem !important;
+    }
+    p {
+      font-size: 1.3rem !important;
+    }
+    a {
+      font-size: 1rem !important;
+    }
+  }
+
+  .samdong {
+    h2 {
+      margin-left: 0 !important;
+    }
+  }
+
+  .jadwal-box {
+    padding: 15px 20px;
+    margin: 15px 25px;
+  }
+
+  .desa-list {
+    li {
+      width: 30% !important;
+    }
+  }
+
+  .layanan-row {
+    .keterangan-langkah {
+      width: 40%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    box-shadow: 0px 1px 7px #999;
+    .logo {
+      margin: 0 auto;
+    }
+  }
+  footer {
+    z-index: 9;
+  }
+//   .navLink {
+//     position: fixed;
+//     top: 67px;
+//     right: 0;
+//     left: 0;
+//     // bottom: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     background: #fff;
+//     padding: 20px;
+//     min-height: 100vh;
+//     overflow: hidden;
+//     transition: all 0.5s ease-in-out;
+//     transform: translateY(-1000px);
+//     z-index: -1;
+//     a,
+//     .dropbtn {
+//       color: #333;
+//       font-size: 1.3rem;
+//     }
+//     li,
+//     .dropbtn {
+//       padding: 15px 20px !important;
+//       margin: 10px auto;
+//     }
+//     .dropbtn {
+//       padding: 0 !important;
+//       margin: 0 auto !important;
+//     }
+//     .dropdown {
+//       transition: all 0.5s ease-in-out;
+//     }
+//     .dropdown-content {
+//       background: #fff;
+//       display: none;
+//       position: relative;
+//       z-index: 1;
+//       // box-shadow: 0px 12px 8px 0px rgba(0,0,0,0.2);
+//       a {
+//         display: block;
+//         text-align: left;
+//         padding: 20px 5px;
+//         font-weight: 400;
+//         font-size: 15px;
+//       }
+//     }
+//     .dropdown:hover .dropdown-content {
+//       display: flex;
+//       flex-direction: column;
+//       padding: 10px 0;
+//       margin-right: -70px;
+//     }
+//   }
+
+  .maskot {
+    margin-top: -280px;
+    .gubernur {
+      img {
+        width: 300px;
+        margin-top: -10px;
+      }
+    }
+    .penda {
+      img {
+        width: 280px;
+      }
+    }
+  }
+
+  .popup-modal,
+  .ReactModalPortal {
+    width: 85%;
+  }
+
+  .jumbotron-logo-top {
+    display: block;
+    margin: 0 auto;
+    .logo-left {
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .logo-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      text-align: center;
+      img {
+        display: inline-block;
+      }
+    }
+  }
+
+  .column-rev {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .even {
+    text-align: left !important;
+  }
+
+  .jumbotron {
+    margin-top: 0;
+  }
+
+  .slog {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  .w50 {
+    width: 100%;
+  }
+  .box {
+    margin: 8px;
+    padding: 8px;
+  }
+
+  .content-row {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    .box-icon {
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .jadwal-header {
+    padding: 0 10px;
+  }
+  .jadwal-box {
+    padding: 8px;
+    margin: 8px;
+  }
+  .syarat-ketentuan-header {
+    h2 {
+      font-size: 1.5rem !important;
+    }
+  }
+  .syarat-dan-ketentuan {
+    flex-direction: column;
+    h3 {
+      font-size: 1.2rem;
+    }
+    li {
+      font-size: 1rem !important;
+    }
+  }
+  .syarat {
+    margin-left: 0 !important;
+  }
+
+  .jadwal-content {
+    flex-direction: column;
+    .jadwal-hari,
+    .jadwal-wt {
+      width: 100% !important;
+    }
+  }
+
+  .desa-list {
+    ul {
+      justify-content: space-between;
+    }
+  }
+
+  .maskot {
+    // justify-content: center;
+    .aldo {
+      width: 250px;
+    }
+    .hani {
+      width: 210px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (max-width: 600px) {
+  .maskot {
+    .gubernur {
+      img {
+        width: 230px;
+        margin-top: 10px;
+      }
+    }
+    .penda {
+      img {
+        width: 200px;
+      }
+    }
+  }
+  .maskot {
+    margin-top: -250px;
+    .aldo {
+      width: 200px;
+    }
+    .hani {
+      width: 180px;
+    }
+  }
+
+  .popup-modal,
+  .ReactModalPortal {
+    width: 65%;
+  }
+
+  .billboards {
+    display: none;
+  }
+
+  .hide-on-mobile {
+    display: none;
+  }
+
+  .billboards-mobile {
+    display: block;
+    h2,
+    a {
+      text-align: center;
+      font-size: 12px;
+      color: #f5f5f5;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+
+  .apps-links {
+    .apps-box {
+      margin-right: 10px;
+      margin-left: 10px;
+      h3 {
+        font-size: 15px;
+      }
+      .sambara-web {
+        max-width: 129px;
+      }
+      .sambara-mobile {
+        max-width: 41px;
+      }
+    }
+  }
+
+  .jumbotron-title {
+    transform: translate(-50%, -10%);
+  }
+
+  .jumbotron-logo-top {
+    .logo-right {
+      img {
+        margin: 0 20px;
+      }
+    }
+    .logo-left {
+      img {
+        width: 180px;
+      }
+    }
+    img {
+      width: 60px;
+    }
+    .logo-size {
+      width: 60px;
+    }
+  }
+
+  .row-info {
+    hr {
+      display: none;
+    }
+  }
+
+  .row-kontak {
+    p {
+      font-size: 13px;
+    }
+    .phone {
+      font-size: 31px !important;
+    }
+    a {
+      width: 35px !important;
+      height: 35px !important;
+    }
+  }
+
+  footer {
+    padding: 25px 15px;
+    flex-direction: column;
+    p {
+      span {
+        display: inline;
+      }
+      padding: 2px;
+    }
+  }
+
+  .layanan-row {
+    .box-layanan {
+      flex-direction: column;
+      height: 100%;
+    }
+    .nomor {
+      width: 100%;
+      p {
+        font-size: 2rem;
+        padding: 20px;
+      }
+    }
+    .layanan-langkah {
+      width: 100%;
+      p {
+        padding: 20px;
+        font-size: 1.3rem;
+      }
+    }
+    .keterangan-langkah {
+      width: 100%;
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .logo-right {
+    display: block !important;
+  }
+
+  .maskot {
+    .gubernur {
+      img {
+        width: 220px;
+        margin-top: 20px;
+      }
+    }
+    .penda {
+      img {
+        width: 180px;
+      }
+    }
+  }
+
+  .jumbotron-title {
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+
+  .billboards-mobile {
+    display: block;
+    h2,
+    a {
+      text-align: center;
+      font-size: 12px;
+      color: #f5f5f5;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .maskot {
+    display: none;
+  }
+  .jumbotron-title {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+  }
+  .greetings {
+    display: block;
+    margin-top: 0;
+    .gubmobile {
+      width: 280px;
+    }
+    .pendamobile {
+      width: 200px;
+    }
+    img {
+      display: block;
+      margin: auto;
+    }
+  }
+  .apps-links {
+    flex-direction: column;
+    .web {
+      margin-top: -100px;
+    }
+    .mobile {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+  .apps-box {
+    margin-right: 5px !important;
+    margin-left: 5px !important;
+    padding: 15px 20px !important;
+    h3 {
+      font-size: 15px;
+    }
+    .sambara-web {
+      max-width: 129px;
+    }
+    .sambara-mobile {
+      max-width: 41px;
+    }
+  }
+
+  .slog {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .samdong {
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .content-row {
+    padding: 10px;
+    .box-icon {
+      img {
+        width: 250px !important;
+      }
+    }
+  }
+
+  .pengaduan {
+    padding: 0;
+    margin: 0;
+    hr {
+      margin: 0 10px;
+    }
+  }
+  .pengaduan-content {
+    padding-top: 5px !important;
+    margin-top: 3px !important;
+    .pengaduan-desc {
+      padding: 10px;
+    }
+  }
+  .pengaduan-kontak {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .e-samsat-content {
+    margin: 0px;
+  }
+
+  .visi-misi {
+    padding: 10px 20px;
+    width: 100%;
+    h2,
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1.1rem;
+    }
+
+    .visi,
+    .misi {
+      padding: 15px 10px;
+    }
+  }
+
+  .desa-list {
+    ul {
+      flex-direction: column !important;
+      justify-content: center;
+    }
+  }
+}

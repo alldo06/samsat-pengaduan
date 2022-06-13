@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.dashboard-site {
+	background: #FCF7F7;
+}
+* {
+	font-family: 'Mulish', sans-serif;
+}
+
+body {
+	font-size: .875rem;
+}
+
+.overview-layout {
+	display: flex;
+	width: 100%;
+}
+
+.box-overview {
+	width: 100%;
+	// width: 508.3px;
+	// height: 200px;
+	background: #fff;
+	border: 1px solid #DFE0EB;
+	border-radius: 5px;
+
+	.box-overview-header {
+		padding: 45px 20px 23px;
+		color: #9FA2B4;
+	}
+	.box-overview-content {
+		padding: 0 20px 45px;
+	}
+}
+
+.table-wrapper {
+	border-radius: 6px;
+	border: 1px solid #DFE0EB;
+
+	.table-caption {
+		background: #fff;
+		padding: 32px;
+		caption-side: top;
+	}
+
+	.table-pagination {
+		background: #fff;
+		padding: 24px 32px;
+	}
+}
+
+.table>:not(:last-child)>:last-child>* {
+	border-bottom-color: #DFE0EB;
+}
+
+.table-data {	
+	background: #fff;
+	margin-bottom: 0;
+
+	.status-data-done {
+		background: #29CC97;
+		padding: 5px 12px;
+		border-radius: 20px;
+		font-size: 11px;
+		font-weight: 700;
+		line-height: 14px;
+		letter-spacing: 0.5px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+	.status-data-waiting {
+		background: #FEC400;
+		padding: 5px 12px;
+		border-radius: 20px;
+		font-size: 11px;
+		font-weight: 700;
+		line-height: 14px;
+		letter-spacing: 0.5px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+
+	thead {
+		tr {
+			th {
+				padding: 15px 25px;
+				border: 0;
+				color: #9FA2B4;
+				font-size: 14px;
+				font-weight: 700;
+				line-height: 18px;
+				letter-spacing: 0.2px;
+			}
+		}
+	}
+	tbody {
+		tr {
+			border-color: #DFE0EB;
+			td {
+				padding: 30px 25px;
+				color: #252733;
+				font-size: 14px;
+				font-weight: 600;
+				line-height: 20px;
+				letter-spacing: 0.2px;
+			}
+		}
+	}
+}
+
+.pengaduan, .detail-pt {
+	padding: 15px;
+	margin: 15px 5px;
+	.pengaduan-header {
+	  padding: 10px;
+	  margin: 10px 0;
+	  h2 {
+		color: #bf0707;
+		font-weight: 600;
+		font-size: 2rem;
+	  }
+	}
+	.pengaduan-content {
+	  padding-top: 10px;
+	  margin-top: 5px;
+	  .pengaduan-desc {
+		padding-left: 10px;
+		padding-right: 10px;
+		margin: 0 10px;
+	  }
+	  .pengaduan-kontak {
+		padding: 10px;
+		margin: 5px;
+		.row-kontak {
+		  display: flex;
+		  flex-wrap: wrap;
+		  padding: 5px;
+		  span {
+			padding: 0 10px;
+			margin: 0 10px;
+		  }
+		  .phone {
+			font-size: 42px;
+		  }
+		  p {
+			margin: auto 0;
+		  }
+		}
+	  }
+	}
+  
+	  .card-pgd {
+		  border: 1px solid #B3B7C63D;
+		  border-radius: 10px;
+		  box-shadow: 0px 16px 56px rgba(0, 0, 0, 0.06);
+	  }
+  
+	  .tanggapan {
+		  width: 85%;
+		  margin-left: auto;
+		  margin-right: 0;
+		  display: flex;
+		  flex-direction: column;
+		  justify-content: end;
+	  }
+  }
+  
+  .feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+  }
+
+  .trc {
+	cursor: pointer;
+  }
+  
+  /*
+   * Sidebar
+   */
+   .logo-160 {
+	width: 159px;
+	display: block;
+	margin: auto;
+   } 
+
+	.side-link {
+		&:hover {
+			border-left: 3px solid #DDE2FF;
+			background: #9fa2b433;
+		}
+	}
+	.active {
+		border-left: 3px solid #DDE2FF;
+		background: #9fa2b433;
+	}
+  
+  .sidebar {
+	position: fixed;
+	top: 0;
+	/* rtl:raw:
+	right: 0;
+	*/
+	bottom: 0;
+	/* rtl:remove */
+	left: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 5px 0 0; /* Height of navbar */
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  @media (max-width: 767.98px) {
+	.sidebar {
+	  top: 5rem;
+	}
+  }
+  
+  .sidebar-sticky {
+	position: relative;
+	top: 0;
+	height: calc(100vh - 48px);
+	padding-top: .5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  
+  .sidebar .nav-link {
+	font-weight: 500;
+	color: #A4A6B3;
+  }
+  
+  .sidebar .nav-link .feather {
+	margin-right: 4px;
+	color: #A4A6B3;
+  }
+  
+  .sidebar .nav-link.active {
+	color: #fff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+	color: inherit;
+  }
+  
+  .sidebar-heading {
+	font-size: .75rem;
+	text-transform: uppercase;
+  }
+  
+  /*
+   * Navbar
+   */
+  
+  .navbar-brand {
+	padding-top: .75rem;
+	padding-bottom: .75rem;
+	font-size: 1rem;
+	background-color: rgba(0, 0, 0, .25);
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  }
+  
+  .navbar .navbar-toggler {
+	top: .25rem;
+	right: 1rem;
+  }
+  
+  .navbar .form-control {
+	padding: .75rem 1rem;
+	border-width: 0;
+	border-radius: 0;
+  }
+  
+  .form-control-dark {
+	color: #fff;
+	background-color: rgba(255, 255, 255, .1);
+	border-color: rgba(255, 255, 255, .1);
+  }
+  
+  .form-control-dark:focus {
+	border-color: transparent;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+  }
+  

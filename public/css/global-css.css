@@ -1,0 +1,128 @@
+.feather-20 {
+  width: 20px;
+  height: 20px;
+}
+
+.feather-18 {
+  width: 18px;
+  height: 18px;
+}
+
+.onyx-color {
+  color: #363740;
+}
+
+.f-12 {
+  font-size: 12px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-28 {
+  font-size: 28px;
+}
+
+.f-32 {
+  font-size: 32px;
+}
+
+.f-40 {
+  font-size: 40px;
+}
+
+.fh-16 {
+  line-height: 16px;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.lh-20 {
+  line-height: 20px;
+}
+
+.ls-02 {
+  letter-spacing: 0.2px;
+}
+
+.title-detail {
+  line-height: 30px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+}
+
+.onyx-bg {
+  background: #363740;
+}
+
+.gray-border {
+  border-color: #DFE0EB;
+}
+
+.button-red {
+  background: #bf0707;
+  padding: 9px 15px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.button-red:hover {
+  background: #860606;
+  color: #fff;
+}
+
+.button-outline-red {
+  background: #fff;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.button-outline-red:hover {
+  background: #860606;
+  color: #fff;
+}
+
+.tanggapi-btn {
+  padding: 12px 50px;
+  font-weight: 700;
+}
+
+.searchbar-icon {
+  width: 21px;
+  height: 21px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.searchbar-icon:hover {
+  color: #fff !important;
+}
+/*# sourceMappingURL=global-css.css.map */
