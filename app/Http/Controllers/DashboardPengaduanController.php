@@ -15,11 +15,17 @@ class DashboardPengaduanController extends Controller
 	 */
 	public function index()
 	{
-		$pengaduans = Pengaduan::latest()->paginate(8);
+		$pengaduans = Pengaduan::sortable()->latest()->paginate(8);
 		$tanggapans = Tanggapan::all();
-		// if ($pengaduans->tanggapan) {
-		// 	$pengaduans->status = 'Done';
-		// }
+		
+		foreach ($pengaduans as $pengaduan) {
+			if ($pengaduan->tanggapan) {
+				$pengaduan->status = 'done';
+				$pengaduan->save();
+				// dd('hit', $pengaduan->status);
+			}
+		}
+		
 		return view('dashboard.pengaduan.index', [
 			'pengaduans' => $pengaduans,
 			'tanggapans' => $tanggapans

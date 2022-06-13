@@ -19,12 +19,12 @@
 			<thead>
 				<tr>
 					{{-- <th scope="col">#</th> --}}
-					<th scope="col">Nama</th>
-					<th scope="col">Isi Pengaduan</th>
-					<th scope="col">Tanggal</th>
-					<th scope="col">Email</th>
-					<th scope="col">No. Telp</th>
-					<th class="text-center" scope="col">Status</th>
+					<th scope="col">@sortablelink('nama', 'Nama')</th>
+					<th scope="col">@sortablelink('isi', 'Isi Pengaduan')</th>
+					<th scope="col">@sortablelink('created_at', 'Tanggal')</th>
+					<th scope="col">@sortablelink('email', 'Email')</th>
+					<th scope="col">No. Telp.</th>
+					<th class="text-center" scope="col">@sortablelink('status', 'Status')</th>
 					{{-- <th scope="col">Action</th>  --}}
 				</tr>
 			</thead>
@@ -36,11 +36,15 @@
 						<td>{{ $pengaduan->created_at }}</td>
 						<td>{{ $pengaduan->email }}</td>
 						<td>{{ $pengaduan->nomor_hp }}</td>
-						@if (empty($pengaduan->tanggapan))
-						<td class="text-center"><span class="text-uppercase status-data-waiting">WAITING</span></td>
-						@else
-						<td class="text-center"><span class="text-uppercase status-data-done mx-auto">DONE</span></td>
-						@endif
+						<td class="text-center">
+							<span @class([
+								'text-uppercase',
+								'status-data-waiting' => $pengaduan->status == 'waiting',
+								'status-data-done' => $pengaduan->status == 'done',
+							])>
+								{{ $pengaduan->status }}
+							</span>
+						</td>
 						{{-- <td>
 							<a href="/dashboard/pengaduan/{{ $pengaduan->id }}" class="badge bg-info">
 								<span data-feather="eye">

@@ -22,6 +22,7 @@ class CreatePengaduansTable extends Migration
 			$table->text('isi');
 			$table->time('tanggal')->nullable();
 			$table->string('image')->nullable();
+			$table->string('status')->default('waiting');
 			$table->boolean('sk_agreement')->default(0);
 			$table->timestamps();
 		});
