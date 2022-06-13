@@ -93,6 +93,10 @@ body {
   letter-spacing: 0.2px;
 }
 
+.table-data thead tr th a {
+  color: #9FA2B4;
+}
+
 .table-data tbody tr {
   border-color: #DFE0EB;
 }
