@@ -1607,6 +1607,47 @@
   margin: 5px 0;
 }
 
+.page-item {
+  margin: 0 3px;
+}
+
+.page-item, .page-link {
+  border-radius: 10px;
+  background: transparent;
+}
+
+.page-link {
+  color: #bf0707;
+}
+
+.page-link:hover {
+  color: #bf0707;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #bf0707;
+  border-color: #bf0707;
+}
+
+.page-item.disabled-np .page-link {
+  background: transparent;
+}
+
+.disabled-np {
+  background: transparent;
+}
+
+.page-item:first-child .page-link {
+  margin-left: 0;
+  border-radius: 10px;
+}
+
+.page-item:last-child .page-link {
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 1225px) {
   .maskot .aldo {
     width: 280px;

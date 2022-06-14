@@ -15,7 +15,7 @@ class DashboardTanggapanController extends Controller
      */
     public function index()
     {
-        $tanggapans = Tanggapan::latest()->paginate(2);
+        $tanggapans = Tanggapan::sortable()->latest()->paginate(2);
 				return view('dashboard.tanggapan.index', compact('tanggapans'));
     }
 

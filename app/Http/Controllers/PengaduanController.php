@@ -18,7 +18,7 @@ class PengaduanController extends Controller
 	{
 		return view('pages.pengaduan.index', [
 			"title" => "Pengaduan",
-			"pengaduan" => Pengaduan::latest()->filter(request(['search']))->get()
+			"pengaduan" => Pengaduan::latest()->filter(request(['search']))->paginate(5)
 		]);
 	}
 
