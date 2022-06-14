@@ -14,7 +14,34 @@
 	stroke-linejoin: round;
 	fill: none;
 }
-  
+ 
+
+.substring {
+    display: block;
+    //* Fallback for non-webkit */
+    display: -webkit-box;
+    max-height: 14*1.6*3;
+    //* Fallback for non-webkit */
+    font-size: 14;
+    line-height: 1.6;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.substring-card {
+    display: block;
+    //* Fallback for non-webkit */
+    display: -webkit-box;
+    max-height: 16*1.6*5;
+    //* Fallback for non-webkit */
+    font-size: 16;
+    line-height: 1.6;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 .onyx-color {
 	color: #363740;

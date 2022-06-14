@@ -21,7 +21,7 @@
 				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
 			</div>
 			@endif
-			<p class="py-2 px-3 mb-0 f-18">{{ $pengaduan->isi }}</p>
+			<p class="py-2 mb-0 f-18">{{ $pengaduan->isi }}</p>
 		</div>
 
 		{{-- Looping --}}
@@ -57,8 +57,8 @@
 		</div>
 		@else
 		<div class="tanggapan my-lg-3 py-lg-3 px-sm-3 mb-3 pb-3">
-			<p class="font-weight-bold f-20">Tanggapan</p>
-			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at }}</small>		
+			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at->format('d/m/Y') }}</small>		
+			<p class="fw-600 bold f-20">Tanggapan</p>
 			<p class="py-2 mb-0 f-18">{{ $pengaduan->tanggapan->isi_tanggapan }}</p>
 		</div>
 		@endif

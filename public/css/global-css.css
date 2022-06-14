@@ -16,6 +16,30 @@
   fill: none;
 }
 
+.substring {
+  display: block;
+  display: -webkit-box;
+  max-height: 67.2;
+  font-size: 14;
+  line-height: 1.6;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.substring-card {
+  display: block;
+  display: -webkit-box;
+  max-height: 128;
+  font-size: 16;
+  line-height: 1.6;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .onyx-color {
   color: #363740;
 }

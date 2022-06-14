@@ -47,7 +47,7 @@ class PengaduanController extends Controller
 			'alamat' => 'required|max:255',
 			'email' => 'max:255',
 			'nomor_hp' => 'required|numeric',
-			'isi' => 'required|max:500',
+			'isi' => 'required|max:1500',
 			'image' => 'image|file|max:1024',
 			'sk_agreement' => 'required',
 		]);
