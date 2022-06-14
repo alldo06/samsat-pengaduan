@@ -12,7 +12,7 @@
 		<div class="my-3 p-3">
 			<small class="text-muted">{{ $aduan->created_at->format('d/m/Y') }}
 			</small>			
-			<p class="h3 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
+			<p class="h4 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
 			@if ($aduan->image)
 			<div class="my-4" style="max-height: 350px; overflow:hidden">
 				<img src="{{ asset('storage/' . $aduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
@@ -45,8 +45,8 @@
 		@else
 		<div class="tanggapan mt-3 mb-5 p-3">
 			<small class="text-muted">{{ $aduan->tanggapan->created_at }}</small>			
-			<p class="font-weight-bold">Tanggapan</p>
-			<p class="py-2 mb-0">{{ $aduan->tanggapan->isi_tanggapan }}</p>
+			<p class="h4 fw-500 mt-2">Tanggapan</p>
+			<p class="py-2 px-sm-4 b-0">{{ $aduan->tanggapan->isi_tanggapan }}</p>
 		</div>
 		@endif
 
