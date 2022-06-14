@@ -4,18 +4,18 @@
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-5 ml-3">
 		<h1 class="f-24 font-weight-bold title-detail">Pengaduan</h1>
 	</div>
-	<div class="detail-pt mx-5">
+	<div class="detail-pt mx-5 px-5">
 
 		{{-- pengaduan --}}
 		<div class="my-3 p-3">
 			<small class="text-muted">{{ $pengaduan->created_at }}</small>			
-			<p class="font-weight-bold my-3 f-20">Oleh {{ $pengaduan->nama }}</p>
-			<p class="py-2 mb-0 f-18">{{ $pengaduan->isi }}</p>
+			<p class="font-weight-bold my-3 h3">Oleh {{ $pengaduan->nama }}</p>
 			@if ($pengaduan->image)
-			<div style="max-height: 400px; overflow:hidden">
-				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-fluid mt-3">
+			<div class="my-3" style="max-height: 350px; overflow:hidden">
+				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
 			</div>
 			@endif
+			<p class="py-2 px-3 mb-0 f-18">{{ $pengaduan->isi }}</p>
 		</div>
 
 		{{-- Looping --}}
