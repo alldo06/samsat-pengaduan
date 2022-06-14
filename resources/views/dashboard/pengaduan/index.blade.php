@@ -33,7 +33,7 @@
 					<tr onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id }}'" class="trc">
 						<td>{{ $pengaduan->nama }}</td>
 						<td>{{ $pengaduan->isi }}</td>
-						<td>{{ $pengaduan->created_at }}</td>
+						<td>{{ $pengaduan->created_at->format('d/m/Y') }}</td>
 						<td>{{ $pengaduan->email }}</td>
 						<td>{{ $pengaduan->nomor_hp }}</td>
 						<td class="text-center">
