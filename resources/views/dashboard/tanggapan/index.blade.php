@@ -17,15 +17,19 @@
 			<caption class="table-caption">List</caption>
 			<thead>
 				<tr>
-					<th scope="col">Isi Tanggapan</th>
-					<th scope="col">Tanggal</th>
+					<th scope="col">@sortablelink('isi_tanggapan', 'Isi Tanggapan')</th>
+					<th scope="col">@sortablelink('created_at', 'Tanggal')</th>
 					{{-- <th scope="col">Action</th> --}}
 				</tr>
 			</thead>
 			<tbody>
 				@foreach ($tanggapans as $tanggapan)
 					<tr onclick="location.href='/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}'" class="trc">
-						<td>{{ $tanggapan->isi_tanggapan }}</td>
+						<td>
+							<span class="substring">
+								{{ $tanggapan->isi_tanggapan }}
+							</span>
+						</td>
 						<td>{{ $tanggapan->created_at->format('d/m/Y') }}</td>
 						{{-- <td>
 							<a href="/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}" class="badge bg-info">
