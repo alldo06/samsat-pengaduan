@@ -7,10 +7,23 @@
   width: 18px;
   height: 18px;
 }
+.feather-stroke-red {
+	stroke: #bf0707;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
   
 
 .onyx-color {
 	color: #363740;
+}
+.red-color {
+	color: #bf0707;
+}
+.green-color {
+	color: #0a820e;
 }
 .f-12 {
 	font-size: 12px;

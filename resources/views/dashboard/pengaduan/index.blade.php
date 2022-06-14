@@ -6,12 +6,11 @@
 		<h1 class="f-24 font-weight-bold title-detail">Pengaduan</h1>
 	</div>   
 
-	@if (session()->has('success'))
+	{{-- @if (session()->has('success'))
 		<div class="alert alert-success col-lg-12" role="alert">
 			{{ session('success') }}
 		</div>
-	@endif
-	
+	@endif --}}
 	
 	<div class="table-responsive table-wrapper">
 		<table class="table table-hover table-data">

@@ -3,20 +3,6 @@
 @section('container')	
 {{-- <div class="w100 body"></div> --}}
 		<section class="form-signin">
-
-			@if (session()->has('success'))
-				<div class="alert alert-success alert-dismissible fade show" role="alert">
-					{{ session('success') }}
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>
-			@endif
-
-			@if (session()->has('loginError'))
-				<div class="alert alert-danger alert-dismissible fade show" role="alert">
-					{{ session('loginError') }}
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-				</div>
-			@endif
 			
 				<div class="content-login">
 					<img src="/img/logo-humas-samsat-hgl.png" alt="Logo Samsat" class="logo-160">
@@ -29,7 +15,23 @@
 						Log In
 					</h4>
 
+					
 					<div class="content-login-body">
+						@if (session()->has('success'))
+						<div class="alert green-color alert-dismissible fade show" role="alert">
+							{{ session('success') }}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+						@endif
+		
+						@if (session()->has('loginError'))
+							<div class="alert red-color fade show text-center" role="alert">
+								<span class="feather-16 mr-3 my-auto feather-stroke-red" data-feather="alert-circle"></span>
+								{{ session('loginError') }}
+								{{-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> --}}
+							</div>
+						@endif
+
 						<form action="/login" method="post">
 							@csrf
 							<div class="form-group my-4">
