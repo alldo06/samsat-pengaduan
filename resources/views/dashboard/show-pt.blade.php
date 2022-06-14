@@ -8,7 +8,7 @@
 
 		{{-- pengaduan --}}
 		<div class="my-3 p-3">
-			<small class="text-muted">{{ $pengaduan->created_at }}</small>			
+			<small class="text-muted">{{ $pengaduan->created_at->format('d/m/Y') }}</small>			
 			<p class="font-weight-bold my-3 h3">Oleh {{ $pengaduan->nama }}</p>
 			@if ($pengaduan->image)
 			<div class="my-3" style="max-height: 350px; overflow:hidden">

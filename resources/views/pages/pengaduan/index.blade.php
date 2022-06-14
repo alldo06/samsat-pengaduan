@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="container">
+<div class="container mb-4">
 	<div class="pengaduan">
 		<div class="pengaduan-header">
 			<h2>Saran, Pengaduan dan Permintaan Informasi</h2>
@@ -26,7 +26,7 @@
 					<div onclick="location.href='/pengaduan/{{ $aduan->id }}'" class="card-pgd py-4 pl-4 my-4">
 						<p class="f-18 author">Oleh {{ $aduan->nama }}</p>
 						<p class="f-16 pt-2 pb-3 mb-0">{{ $aduan->isi }}</p>
-						<small class="f-14 text-muted">{{ $aduan->created_at }}</small>
+						<small class="f-14 text-muted">{{ $aduan->created_at->format('d/m/Y') }}</small>
 					</div>
 					@endforeach
 					{{-- @foreach ($pengaduan as $aduan)

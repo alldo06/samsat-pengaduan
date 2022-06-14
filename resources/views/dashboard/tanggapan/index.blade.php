@@ -27,7 +27,7 @@
 				@foreach ($tanggapans as $tanggapan)
 					<tr onclick="location.href='/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}'" class="trc">
 						<td>{{ $tanggapan->isi_tanggapan }}</td>
-						<td>{{ $tanggapan->created_at }}</td>
+						<td>{{ $tanggapan->created_at->format('d/m/Y') }}</td>
 						{{-- <td>
 							<a href="/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}" class="badge bg-info">
 								<span data-feather="eye">

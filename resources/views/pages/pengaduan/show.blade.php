@@ -10,7 +10,8 @@
 
 		{{-- Aduan --}}
 		<div class="my-3 p-3">
-			<small class="text-muted">{{ $aduan->created_at }}</small>			
+			<small class="text-muted">{{ $aduan->created_at->format('d/m/Y') }}
+			</small>			
 			<p class="h3 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
 			@if ($aduan->image)
 			<div class="my-4" style="max-height: 350px; overflow:hidden">
