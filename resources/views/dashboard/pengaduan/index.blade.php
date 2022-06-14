@@ -21,6 +21,7 @@
 					<th scope="col">@sortablelink('nama', 'Nama')</th>
 					<th scope="col">@sortablelink('isi', 'Isi Pengaduan')</th>
 					<th scope="col">@sortablelink('created_at', 'Tanggal')</th>
+					<th scope="col">@sortablelink('alamat', 'Alamat')</th>
 					<th scope="col">@sortablelink('email', 'Email')</th>
 					<th scope="col">No. Telp.</th>
 					<th class="text-center" scope="col">@sortablelink('status', 'Status')</th>
@@ -37,6 +38,7 @@
 							</span>
 						</td>
 						<td>{{ $pengaduan->created_at->format('d/m/Y') }}</td>
+						<td>{{ $pengaduan->alamat }}</td>
 						<td>{{ $pengaduan->email }}</td>
 						<td>{{ $pengaduan->nomor_hp }}</td>
 						<td class="text-center">
