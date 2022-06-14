@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="container">
-	<div class="detail-pt px-5">
+	<div class="detail-pt px-sm-5">
 		<div class="pengaduan-header">
 			<h2>Saran, Pengaduan dan Permintaan Informasi</h2>
 		</div>
@@ -12,13 +12,13 @@
 		<div class="my-3 p-3">
 			<small class="text-muted">{{ $aduan->created_at->format('d/m/Y') }}
 			</small>			
-			<p class="h3 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
+			<p class="h4 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
 			@if ($aduan->image)
 			<div class="my-4" style="max-height: 350px; overflow:hidden">
 				<img src="{{ asset('storage/' . $aduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
 			</div>
 			@endif
-			<p class="py-2 px-4 mb-0 f-18">{{ $aduan->isi }}</p>
+			<p class="py-2 px-sm-4 mb-0 f-18">{{ $aduan->isi }}</p>
 		</div>
 
 		{{-- Looping --}}
@@ -39,14 +39,14 @@
 
 		{{-- Tanggapan --}}
 		@if (empty($aduan->tanggapan->isi_tanggapan))
-		<div class="text-center mt-3 mb-5 p-3">		
+		<div class="text-center mt-3 mb-5 p-sm-3">		
 			<p class="fw-500 h3">Belum ada tanggapan</p>
 		</div>
 		@else
 		<div class="tanggapan mt-3 mb-5 p-3">
 			<small class="text-muted">{{ $aduan->tanggapan->created_at }}</small>			
-			<p class="font-weight-bold">Tanggapan</p>
-			<p class="py-2 mb-0">{{ $aduan->tanggapan->isi_tanggapan }}</p>
+			<p class="h4 fw-500 mt-2">Tanggapan</p>
+			<p class="py-2 px-sm-4 b-0">{{ $aduan->tanggapan->isi_tanggapan }}</p>
 		</div>
 		@endif
 

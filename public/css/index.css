@@ -2056,11 +2056,11 @@
   .content-row .box-icon img {
     width: 250px !important;
   }
-  .pengaduan {
+  .pengaduan, .detail-pt {
     padding: 0;
     margin: 0;
   }
-  .pengaduan hr {
+  .pengaduan hr, .detail-pt hr {
     margin: 0 10px;
   }
   .pengaduan-content {

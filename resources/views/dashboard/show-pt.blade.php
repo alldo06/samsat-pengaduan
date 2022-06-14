@@ -1,15 +1,21 @@
 @extends('dashboard.layouts.main')
 
 @section('container')
-	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-5 ml-3">
-		<h1 class="f-24 font-weight-bold title-detail">Pengaduan</h1>
+	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-lg-2 mt-5 mb-lg-2 ml-3 mb-3">
+		<h1 class="h3 font-weight-bold title-detail">
+			@if (empty($pengaduan->tanggapan->isi_tanggapan))
+				Pengaduan
+			@else
+				Pengaduan & Tanggapan
+			@endif
+		</h1>
 	</div>
-	<div class="detail-pt mx-5 px-5">
+	<div class="detail-pt mx-md-4 px-lg-5">
 
 		{{-- pengaduan --}}
-		<div class="my-3 p-3">
+		<div class="my-lg-3 py-lg-3 px-3">
 			<small class="text-muted">{{ $pengaduan->created_at->format('d/m/Y') }}</small>			
-			<p class="font-weight-bold my-3 h3">Oleh {{ $pengaduan->nama }}</p>
+			<p class="fw-600 my-3 h4">Oleh {{ $pengaduan->nama }}</p>
 			@if ($pengaduan->image)
 			<div class="my-3" style="max-height: 350px; overflow:hidden">
 				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
@@ -36,7 +42,7 @@
 
 		{{-- Tanggapan --}}
 		@if (empty($pengaduan->tanggapan->isi_tanggapan))
-		<div class="tanggapan my-3 p-3">			
+		<div class="tanggapan my-lg-3 py-lg-3 px-sm-3 mb-3 pb-3">			
 			<form method="POST" action="/tanggapan" class="col-lg-12" enctype="multipart/form-data">
 				@csrf
 				<input type="hidden" name="pengaduan_id" id="pengaduan_id" value="{{ $pengaduan->id }}">
@@ -50,7 +56,7 @@
 			</form>
 		</div>
 		@else
-		<div class="tanggapan my-3 p-3">
+		<div class="tanggapan my-lg-3 py-lg-3 px-sm-3 mb-3 pb-3">
 			<p class="font-weight-bold f-20">Tanggapan</p>
 			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at }}</small>		
 			<p class="py-2 mb-0 f-18">{{ $pengaduan->tanggapan->isi_tanggapan }}</p>
@@ -58,10 +64,6 @@
 		@endif
 
 		{{-- <a href="/tanggapan/create" class="btn btn-outline-success">Beri tanggapan</a> --}}
-
-		{{-- Beri Tanggapan --}}
-		<div class="tanggapan">
-		</div>
 	</div>
 	
 @endsection
