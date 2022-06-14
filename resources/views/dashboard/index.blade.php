@@ -10,18 +10,18 @@
 		<div class="overview-layout">
 			<div class="box-overview mx-sm-3 mb-4 mb-sm-0">
 				<div class="box-overview-header text-center">
-					<h5 class="font-weight-bold">Hari Ini</h5>
+					<h5 class="font-weight-bold">Total Pengaduan</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">6</p>
+					<p class="f-40 font-weight-bold">60</p>
 				</div>
 			</div>
 			<div class="box-overview mx-sm-3 mb-4 mb-sm-0">
 				<div class="box-overview-header text-center">
-					<h5 class="font-weight-bold">Bulan Ini</h5>
+					<h5 class="font-weight-bold">Menunggu Ditanggapi</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">20</p>
+					<p class="f-40 font-weight-bold">16</p>
 				</div>
 			</div>
 		</div>
