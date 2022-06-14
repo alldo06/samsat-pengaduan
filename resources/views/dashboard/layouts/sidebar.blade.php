@@ -24,27 +24,15 @@
             </a>
           </li>
         </ul>
-
-					{{-- <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-						<span>Administrator</span>
-					</h6>
-
-					<ul class="nav flex-column">
-						<li class="nav-item">
-							<a class="nav-link {{ Request::is('dashboard/categories*') ? 'active' : '' }}" href="/dashboard/categories">
-								<span data-feather="grid"></span>
-								Post Categories
-							</a>
-						</li>
-					</ul>			 --}}
+				
 				<hr class="gray-border">
         <ul class="nav flex-column">
           <li class="nav-item">
 						<form action="/logout" method="post" class="nav-link side-link py-3">
 							@csrf
-							<button type="submit" class="bg-transparent border-0 text-white">
+							<button type="submit" class="bg-transparent border-0">
 								<span class="mx-3 my-auto feather-16" data-feather="log-out"></span>
-								<span class="ml-2 f-16 fw-400 lh-20 ls-02">Log out</span>
+								<span class="ml-2 f-16 fw-400 lh-20 ls-02 metallic-silver-color">Log out</span>
 							</button>
 						</form>
             </a>

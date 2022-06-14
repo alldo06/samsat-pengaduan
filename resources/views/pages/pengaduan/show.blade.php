@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="container">
-	<div class="detail-pt px-5">
+	<div class="detail-pt px-sm-5">
 		<div class="pengaduan-header">
 			<h2>Saran, Pengaduan dan Permintaan Informasi</h2>
 		</div>
@@ -18,7 +18,7 @@
 				<img src="{{ asset('storage/' . $aduan->image) }}" alt="Gambar Pengaduan" class="img-fluid">
 			</div>
 			@endif
-			<p class="py-2 px-4 mb-0 f-18">{{ $aduan->isi }}</p>
+			<p class="py-2 px-sm-4 mb-0 f-18">{{ $aduan->isi }}</p>
 		</div>
 
 		{{-- Looping --}}
@@ -39,7 +39,7 @@
 
 		{{-- Tanggapan --}}
 		@if (empty($aduan->tanggapan->isi_tanggapan))
-		<div class="text-center mt-3 mb-5 p-3">		
+		<div class="text-center mt-3 mb-5 p-sm-3">		
 			<p class="fw-500 h3">Belum ada tanggapan</p>
 		</div>
 		@else

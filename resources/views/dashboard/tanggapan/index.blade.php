@@ -3,7 +3,7 @@
 @section('container')
 		
 	<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 my-5 ml-3">
-		<h1 class="h5 font-weight-bold">Tanggapan</h1>
+		<h1 class="f-24 font-weight-bold">Tanggapan</h1>
 	</div>   
 
 	{{-- @if (session()->has('success'))

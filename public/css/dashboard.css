@@ -16,6 +16,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .box-overview {
@@ -111,8 +115,8 @@ body {
 }
 
 .pengaduan, .detail-pt {
-  padding: 15px;
-  margin: 15px 5px;
+  padding: 0 8px;
+  margin: 5px;
 }
 
 .pengaduan .pengaduan-header, .detail-pt .pengaduan-header {
@@ -172,7 +176,7 @@ body {
 }
 
 .pengaduan .tanggapan, .detail-pt .tanggapan {
-  width: 85%;
+  width: 90%;
   margin-left: auto;
   margin-right: 0;
   display: -webkit-box;
@@ -235,7 +239,7 @@ body {
 
 @media (max-width: 767.98px) {
   .sidebar {
-    top: 5rem;
+    top: 3rem;
   }
 }
 
@@ -263,11 +267,6 @@ body {
   color: #fff;
 }
 
-.sidebar .nav-link:hover .feather,
-.sidebar .nav-link.active .feather {
-  color: inherit;
-}
-
 .sidebar-heading {
   font-size: .75rem;
   text-transform: uppercase;
@@ -280,13 +279,9 @@ body {
   padding-top: .75rem;
   padding-bottom: .75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
-          box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .navbar .navbar-toggler {
-  top: .25rem;
   right: 1rem;
 }
 
@@ -306,5 +301,33 @@ body {
   border-color: transparent;
   -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
           box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+@media screen and (min-width: 576px) {
+  .tanggapan {
+    width: 85%;
+    margin-left: auto;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .overview-layout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=dashboard.css.map */
