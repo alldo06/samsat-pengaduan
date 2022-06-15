@@ -6,6 +6,7 @@ use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class PengaduanController extends Controller
 {
@@ -43,6 +44,7 @@ class PengaduanController extends Controller
 		// $date = Carbon::now()->format('d/m/Y');
 
 		$validatedData = $request->validate([
+			'id_pengaduan' => 'max:255|unique:pengaduans',
 			'nama' => 'required|max:255',
 			'alamat' => 'required|max:255',
 			'email' => 'max:255',
@@ -56,6 +58,10 @@ class PengaduanController extends Controller
 			$validatedData['image'] = $request->file('image')->store('pengaduan-images', 'public');
 		}
 
+		$validatedData['id_pengaduan'] = Str::random(30);
+		// $validatedData['id'] = Str::random(40);
+		// dd($request->id);
+		// dd($validatedData);
 		Pengaduan::create($validatedData);
 
 		return redirect('/pengaduan');

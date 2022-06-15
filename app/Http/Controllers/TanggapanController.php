@@ -42,6 +42,7 @@ class TanggapanController extends Controller
 	{
 		$validatedData = $request->validate([
 			'pengaduan_id' => 'required',
+			'id_pengaduan' => 'required',
 			'isi_tanggapan' => 'required'
 		]);
 

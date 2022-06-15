@@ -24,7 +24,7 @@
 			</thead>
 			<tbody>
 				@foreach ($tanggapans as $tanggapan)
-					<tr onclick="location.href='/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}'" class="trc">
+					<tr onclick="location.href='/dashboard/pengaduan/{{ $tanggapan->id_pengaduan }}'" class="trc">
 						<td>
 							<span class="substring">
 								{{ $tanggapan->isi_tanggapan }}

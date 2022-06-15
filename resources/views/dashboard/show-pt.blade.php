@@ -47,6 +47,7 @@
 			<form method="POST" action="/tanggapan" class="col-lg-12" enctype="multipart/form-data">
 				@csrf
 				<input type="hidden" name="pengaduan_id" id="pengaduan_id" value="{{ $pengaduan->id }}">
+				<input type="hidden" name="id_pengaduan" id="id_pengaduan" value="{{ $pengaduan->id_pengaduan }}">
 				<div class="mb-3">
 					<label for="isi_tanggapan" class="form-label f-20 font-weight-bold mb-3">Tanggapan</label>
 					<textarea class="form-control @error('isi_tanggapan') is-invalid @enderror" id="isi_tanggapan" name="isi_tanggapan" required value="{{ old('isi_tanggapan') }}" rows="5"></textarea>
