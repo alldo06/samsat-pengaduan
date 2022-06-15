@@ -67,7 +67,7 @@
 			</tbody>
 			<caption class="p-0">					
 				<div class="d-flex justify-content-end table-pagination">
-					{{ $pengaduans->links() }}
+					{{ $pengaduans->appends(request()->except('page'))->links() }}
 				</div>
 			</caption>
 		</table>

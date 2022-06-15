@@ -41,7 +41,7 @@
 			</div>
 		</div>
 		<div class="d-flex justify-content-center paginating">
-			{{ $pengaduan->links('pagination::paging') }}
+			{{ $pengaduan->appends(request()->except('page'))->links('pagination::paging') }}
 		</div>
 	</div>
 </div>
