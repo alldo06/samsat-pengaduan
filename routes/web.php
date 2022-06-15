@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardOverviewController;
 use App\Http\Controllers\DashboardPengaduanController;
 use App\Http\Controllers\DashboardTanggapanController;
 use App\Http\Controllers\LoginController;
@@ -77,9 +78,10 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', function () {
-	return view('dashboard.index');
-})->middleware('auth');
+// Route::get('/dashboard', function () {
+// 	return view('dashboard.index');
+// })->middleware('auth');
+Route::get('/dashboard', [DashboardOverviewController::class, 'index'])->middleware('auth');
 
 Route::resource('/dashboard/pengaduan', DashboardPengaduanController::class)->middleware('auth');
 // Route::get('/dashboard/pengaduan/{aduan:id}', TanggapanShowController::class, 'show')->middleware('auth');
