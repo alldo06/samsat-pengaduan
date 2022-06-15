@@ -13,6 +13,8 @@ class Pengaduan extends Model
 
 	protected $guarded = ['id'];
 
+	public $sortable = ['nama', 'created_at', 'email', 'nomor_hp', 'isi', 'status', 'alamat'];
+
 	public function tanggapan()
 	{
 		return $this->hasOne(Tanggapan::class);

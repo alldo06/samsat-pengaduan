@@ -48,7 +48,7 @@
 			</tbody>
 			<caption class="p-0">					
 				<div class="d-flex justify-content-end table-pagination">
-					{{ $tanggapans->links() }}
+					{{ $tanggapans->appends(request()->except('page'))->links() }}
 				</div>
 			</caption>
 		</table>
