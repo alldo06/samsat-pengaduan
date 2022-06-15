@@ -28,4 +28,10 @@ class Pengaduan extends Model
 			});
 		});
 	}
+
+	public function getRouteKeyName()
+	{
+		return 'id_pengaduan';
+	}
+
 }

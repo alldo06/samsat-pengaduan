@@ -23,7 +23,7 @@
 				</form>
 				@if ($pengaduan->count())
 					@foreach ($pengaduan as $aduan)
-					<div onclick="location.href='/pengaduan/{{ $aduan->id }}'" class="card-pgd py-4 pl-4 my-4">
+					<div onclick="location.href='/pengaduan/{{ $aduan->id_pengaduan }}'" class="card-pgd py-4 pl-4 my-4">
 						<p class="f-18 author">Oleh {{ $aduan->nama }}</p>
 						<p class="substring-card pt-2 mb-1">{{ $aduan->isi }}</p>
 						<small class="f-14 text-muted">{{ $aduan->created_at->format('d/m/Y') }}</small>

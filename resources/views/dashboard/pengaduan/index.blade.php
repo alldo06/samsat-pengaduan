@@ -30,7 +30,7 @@
 			</thead>
 			<tbody>
 				@foreach ($pengaduans as $pengaduan)
-					<tr onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id }}'" class="trc">
+					<tr onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'" class="trc">
 						<td>{{ $pengaduan->nama }}</td>
 						<td>
 							<span class="substring">
