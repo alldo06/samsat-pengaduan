@@ -13,7 +13,7 @@
 					<h5 class="font-weight-bold">Total Pengaduan</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">60</p>
+					<p class="f-40 font-weight-bold">{{ $totalPengaduan }}</p>
 				</div>
 			</div>
 			<div class="box-overview mx-sm-3 mb-4 mb-sm-0">
@@ -21,7 +21,7 @@
 					<h5 class="font-weight-bold">Menunggu Ditanggapi</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">16</p>
+					<p class="f-40 font-weight-bold">{{ $menungguDitanggapi }}</p>
 				</div>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 					<h5 class="font-weight-bold">Hari Ini</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">6</p>
+					<p class="f-40 font-weight-bold">{{ $pengaduanHariIni }}</p>
 				</div>
 			</div>
 			<div class="box-overview mx-sm-3 mb-4 mb-sm-0">
@@ -41,7 +41,7 @@
 					<h5 class="font-weight-bold">Bulan Ini</h5>
 				</div>
 				<div class="box-overview-content text-center">
-					<p class="f-40 font-weight-bold">20</p>
+					<p class="f-40 font-weight-bold">{{ $pengaduanBulanan }}</p>
 				</div>
 			</div>
 		</div>
