@@ -20,6 +20,14 @@
   fill: none;
 }
 
+.feather-stroke-white {
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 .substring {
   display: block;
   display: -webkit-box;

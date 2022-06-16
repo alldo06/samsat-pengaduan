@@ -18,7 +18,7 @@
 					
 					<div class="content-login-body">
 						@if (session()->has('success'))
-						<div class="alert green-color alert-dismissible fade show" role="alert">
+						<div class="alert green-color alert-dismissible fade show font-weight-bold" role="alert">
 							{{ session('success') }}
 							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 						</div>
@@ -27,7 +27,9 @@
 						@if (session()->has('loginError'))
 							<div class="alert red-color fade show text-center" role="alert">
 								<span class="feather-16 mr-3 my-auto feather-stroke-red" data-feather="alert-circle"></span>
-								{{ session('loginError') }}
+								<span class="red-color font-weight-bold text-center">
+									{{ session('loginError') }}
+								</span>
 								{{-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> --}}
 							</div>
 						@endif
