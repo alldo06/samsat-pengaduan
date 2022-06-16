@@ -15,8 +15,8 @@ class DashboardPengaduanController extends Controller
 	 */
 	public function index()
 	{
-		$pengaduans = Pengaduan::sortable()->latest()->paginate(8);
-		$tanggapans = Tanggapan::all();
+		$pengaduans = Pengaduan::with('tanggapan')->sortable()->latest()->paginate(8);
+		// $tanggapans = Tanggapan::all();
 		
 		foreach ($pengaduans as $pengaduan) {
 			if ($pengaduan->tanggapan) {
@@ -27,8 +27,8 @@ class DashboardPengaduanController extends Controller
 		}
 		
 		return view('dashboard.pengaduan.index', [
-			'pengaduans' => $pengaduans,
-			'tanggapans' => $tanggapans
+			'pengaduans' => $pengaduans
+			// 'tanggapans' => $tanggapans
 		]);
 	}
 
