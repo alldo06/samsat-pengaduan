@@ -14,14 +14,24 @@
     <link href="/css/dashboard.css" rel="stylesheet">
     <link href="/css/global-css.css" rel="stylesheet">
 
+		{{-- Trix Editor --}}
+  	<link rel="stylesheet" type="text/css" href="/css/trix.css">
+  	<script type="text/javascript" src="/js/trix.js"></script>
+    <script src="/js/attachment.js"></script>
+
+  	
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+		{{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script> --}}
+
 		{{-- Tailwind --}}
 		{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 
-		{{-- <style>
+		<style>
 			trix-toolbar [data-trix-button-group="file-tools"]{
 				display: none;
 			}
-		</style> --}}
+		</style>
   </head>
   <body class="dashboard-site">
 

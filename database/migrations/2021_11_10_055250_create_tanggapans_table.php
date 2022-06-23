@@ -19,6 +19,9 @@ class CreateTanggapansTable extends Migration
 			$table->char('id_pengaduan');
 			$table->timestamp('tanggal')->nullable();
 			$table->string('isi_tanggapan');
+			$table->string('file')->nullable();
+			$table->string('file_name')->nullable();
+			$table->string('file_extension')->nullable();
 			$table->timestamps();
 		});
 	}
