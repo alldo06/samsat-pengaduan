@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <title>Pengaduan</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,8 +13,17 @@
 		{{-- CSS --}}
     <link href="/css/index.css" rel="stylesheet">
     <link href="/css/global-css.css" rel="stylesheet">
+		
+		{{-- Trix Editor --}}
+  	<link rel="stylesheet" type="text/css" href="/css/trix.css">
+  	<script type="text/javascript" src="/js/trix.js"></script>
+    <script src="/js/attachment.js"></script>
 
-    <title>Pengaduan</title>
+		<style>
+			trix-toolbar [data-trix-button-group="file-tools"]{
+				display: none;
+			}
+		</style>
   </head>
   <body class="body-site">
 

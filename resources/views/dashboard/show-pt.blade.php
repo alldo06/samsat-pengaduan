@@ -13,13 +13,13 @@
 	<div class="detail-pt mx-md-4 px-lg-5">
 
 		{{-- pengaduan --}}
-		<div class="my-lg-3 py-lg-3 px-3">
+		<div class="my-lg-2 py-lg-2 px-3">
 			<small class="text-muted">{{ $pengaduan->created_at->format('d/m/Y') }}</small>
 			<p class="fw-600 mt-3 mb-1 h4">Oleh {{ $pengaduan->nama }}</p>
 			<p class="text-muted f-16">{{ $pengaduan->alamat }}</p>
 			@if ($pengaduan->image)
 			<div class="image-wrapper">
-				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="image-full">
+				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-preview img-fluid mb-2 col-sm-7 image-full">
 			</div>
 			@endif
 			<p class="py-2 mb-0 f-18">{{ $pengaduan->isi }}</p>
@@ -54,7 +54,8 @@
 					
 					<input id="isi_tanggapan" type="hidden" name="isi_tanggapan">
 					<trix-editor input="isi_tanggapan"></trix-editor>
-					@if (empty($pengaduan->tanggapan->file))
+
+					{{-- @if (empty($pengaduan->tanggapan->file))
 					<div class="mb-3">
 						<label for="file" class="form-label ">File</label>
 						<img class="img-preview img-fluid mb-2 col-sm-5">
@@ -68,9 +69,9 @@
 					@else
 					<div class="image-wrapper">
 						TEST
-						{{-- <img src="{{ asset('storage/' . $pengaduan->tanggapan->file) }}" alt="Gambar Pengaduan" class="image-full"> --}}
 					</div>
-					@endif
+					@endif --}}
+
 				</div>
 
 				<div class="d-flex justify-content-end">
@@ -85,11 +86,11 @@
 			<article class="py-2 mb-0 f-18">
 				{!! $pengaduan->tanggapan->isi_tanggapan !!}
 			</article>
-			@if ($pengaduan->tanggapan->file)
+			{{-- @if ($pengaduan->tanggapan->file)
 				<div class="f-14 mt-4">
 					{{ $pengaduan->tanggapan->file_name }}
 				</div>
-			@endif
+			@endif --}}
 		</div>
 		@endif
 

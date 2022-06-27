@@ -27,7 +27,7 @@
 					<tr onclick="location.href='/dashboard/pengaduan/{{ $tanggapan->id_pengaduan }}'" class="trc">
 						<td>
 							<span class="substring">
-								{{ $tanggapan->isi_tanggapan }}
+								{!! $tanggapan->isi_tanggapan !!}
 							</span>
 						</td>
 						<td>{{ $tanggapan->created_at->format('d/m/Y') }}</td>
