@@ -45,7 +45,7 @@
 		@else
 		<div class="tanggapan mt-3 mb-5 p-3">
 			<small class="text-muted">{{ $aduan->tanggapan->created_at->format('d/m/Y') }}</small>			
-			<p class="h4 fw-500 mt-2">Tanggapan</p>
+			<p class="h4 fw-500 mt-2">Ditanggapi oleh {{ $aduan->tanggapan->userResponse->nama }}</p>
 			<p class="py-2 b-0">{{ $aduan->tanggapan->isi_tanggapan }}</p>
 		</div>
 		@endif
