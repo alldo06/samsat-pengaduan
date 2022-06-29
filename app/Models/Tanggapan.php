@@ -17,4 +17,9 @@ class Tanggapan extends Model
 	{
 		return $this->hasOne(Pengaduan::class, 'pengaduan_id');
 	}
+
+	public function userResponse()
+	{
+		return $this->belongsTo(User::class, 'user_id');
+	}
 }
