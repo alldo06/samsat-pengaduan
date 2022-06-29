@@ -46,6 +46,8 @@ class TanggapanController extends Controller
 			'isi_tanggapan' => 'required'
 		]);
 
+		$validatedData['user_id'] = auth()->user()->id;
+
 		Tanggapan::create($validatedData);
 
 		// return redirect('/dashboard/pengaduan');

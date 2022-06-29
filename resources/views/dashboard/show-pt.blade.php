@@ -59,8 +59,9 @@
 		</div>
 		@else
 		<div class="tanggapan my-lg-3 py-lg-3 px-sm-3 mb-3 pb-3">
-			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at->format('d/m/Y') }}</small>		
-			<p class="fw-600 bold f-20">Tanggapan</p>
+			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at->format('d/m/Y') }}</small>
+			<p class="fw-600 bold f-20 mb-0">Tanggapan</p>
+			<p class="f-16">Ditanggapi oleh {{ $pengaduan->tanggapan->userResponse->nama }}</p>
 			<p class="py-2 mb-0 f-18">{{ $pengaduan->tanggapan->isi_tanggapan }}</p>
 		</div>
 		@endif
