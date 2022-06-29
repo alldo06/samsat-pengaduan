@@ -16,10 +16,20 @@ class PengaduanController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index()
-	{
+	{		
+		$pengaduans = Pengaduan::with('tanggapan')->latest()->filter(request(['search']))->paginate(10);
+
+		foreach ($pengaduans as $pengaduan) {
+			if ($pengaduan->tanggapan) {
+				$pengaduan->status = 'done';
+				$pengaduan->save();
+				// dd('hit', $pengaduan->status);
+			}
+		}
+
 		return view('pages.pengaduan.index', [
 			"title" => "Pengaduan",
-			"pengaduan" => Pengaduan::latest()->filter(request(['search']))->paginate(5)
+			"pengaduan" => $pengaduans
 		]);
 	}
 
