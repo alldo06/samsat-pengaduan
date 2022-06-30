@@ -45,12 +45,18 @@ class TanggapanController extends Controller
 			'id_pengaduan' => 'required',
 			'isi_tanggapan' => 'required'
 		]);
+		
+		// if ($request->file('file')) {
+		// 	$validatedData['file_name'] = $request->file('file')->getClientOriginalName();
+		// 	$validatedData['file_extension'] = $request->file('file')->getClientOriginalExtension();
+		// 	$validatedData['file'] = $request->file('file')->store('tanggapan-files', 'public');
+		// 	// $validatedData['files'] = $request->file('files')->storeAs('tanggapan-files',$file_name);
+		// }
 
 		$validatedData['user_id'] = auth()->user()->id;
 
 		Tanggapan::create($validatedData);
 
-		// return redirect('/dashboard/pengaduan');
 		return back();
 	}
 

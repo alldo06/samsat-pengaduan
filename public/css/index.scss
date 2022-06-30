@@ -1324,8 +1324,8 @@
 	padding-bottom: (443 / 791) * 100%;
 	position: relative;
 	display: block;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	margin-bottom: 20px;
+	margin-top: 20px;
 	
 	// display: block;
 	// // max-width: 500px;
@@ -1344,7 +1344,7 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		object-fit: cover;
+		object-fit: scale-down;
 	}
 }
 

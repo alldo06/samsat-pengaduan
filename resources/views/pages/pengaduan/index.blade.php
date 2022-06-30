@@ -42,7 +42,7 @@
 							<p class="f-14 text-muted">-</p>
 						@endif
 						<p class="f-18 author">Oleh {{ $aduan->nama }}</p>
-						<p class="substring-card pt-2 mb-1">{{ $aduan->isi }}</p>
+						<p class="substring-card pt-2 mb-1">{!! $aduan->isi !!}</p>
 						<small class="f-14 text-muted">{{ $aduan->created_at->format('d/m/Y') }}</small>
 					</div>
 					@endforeach
@@ -53,7 +53,7 @@
 						</div>
 					@endforeach --}}
 				@else
-					<p class="text-center fs-4 my-5">Pengaduan tidak ditemukan</p>
+					<p class="text-center fs-4 my-5">Tidak ada data Pengaduan</p>
 				@endif
 			</div>
 		</div>

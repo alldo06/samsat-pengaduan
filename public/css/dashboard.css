@@ -195,8 +195,8 @@ body {
   padding-bottom: 56.00506%;
   position: relative;
   display: block;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .image-wrapper .image-full {
@@ -206,8 +206,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .feather {

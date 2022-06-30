@@ -34,7 +34,7 @@
 						<td>{{ $pengaduan->nama }}</td>
 						<td>
 							<span class="substring">
-								{{ $pengaduan->isi }}
+								{!! $pengaduan->isi !!}
 							</span>
 						</td>
 						<td>{{ $pengaduan->created_at->format('d/m/Y') }}</td>
