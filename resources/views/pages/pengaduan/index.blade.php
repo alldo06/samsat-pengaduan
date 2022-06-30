@@ -53,7 +53,7 @@
 						</div>
 					@endforeach --}}
 				@else
-					<p class="text-center fs-4 my-5">Pengaduan tidak ditemukan</p>
+					<p class="text-center fs-4 my-5">Tidak ada data Pengaduan</p>
 				@endif
 			</div>
 		</div>

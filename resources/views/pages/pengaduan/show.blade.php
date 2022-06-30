@@ -9,7 +9,7 @@
 		<hr>
 
 		{{-- Aduan --}}
-		<div class="my-3 p-3 pengaduan-detail">
+		<div class="my-2 p-2 pengaduan-detail">
 			<small class="text-muted">{{ $aduan->created_at->format('d/m/Y') }}
 			</small>			
 			<p class="h4 fw-500 mt-2 pt-title">Oleh {{ $aduan->nama }}</p>
@@ -18,7 +18,7 @@
 				<img src="{{ asset('storage/' . $aduan->image) }}" alt="Gambar Pengaduan" class="image-full">
 			</div>
 			@endif
-			<p class="pb-2 pt-3 mb-0 f-18">{!! $aduan->isi !!}</p>
+			<article class="pb-2 pt-3 mb-0 f-18">{!! $aduan->isi !!}</article>
 		</div>
 
 		{{-- Looping --}}
@@ -46,7 +46,7 @@
 		<div class="tanggapan mt-3 mb-5 p-3">
 			<small class="text-muted">{{ $aduan->tanggapan->created_at->format('d/m/Y') }}</small>
 			<p class="h4 fw-500 mt-2">Ditanggapi oleh {{ $aduan->tanggapan->userResponse->nama }}</p>
-			<p class="py-2 b-0">{!! $aduan->tanggapan->isi_tanggapan !!}</p>
+			<article class="py-2 b-0">{!! $aduan->tanggapan->isi_tanggapan !!}</article>
 			{{-- <p class="py-2 b-0">{{ $aduan->tanggapan->isi_tanggapan }}</p> --}}
 		</div>
 		@endif

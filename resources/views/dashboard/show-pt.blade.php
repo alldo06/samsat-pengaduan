@@ -19,10 +19,10 @@
 			<p class="text-muted f-16">{{ $pengaduan->alamat }}</p>
 			@if ($pengaduan->image)
 			<div class="image-wrapper">
-				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="img-preview img-fluid mb-2 col-sm-7 image-full">
+				<img src="{{ asset('storage/' . $pengaduan->image) }}" alt="Gambar Pengaduan" class="image-full">
 			</div>
 			@endif
-			<p class="py-2 mb-0 f-18">{{ $pengaduan->isi }}</p>
+			<article class="py-2 mb-0 f-18">{!! $pengaduan->isi !!}</article>
 		</div>
 
 		{{-- Looping --}}
@@ -84,7 +84,7 @@
 			<small class="text-muted mb-3">{{ $pengaduan->tanggapan->created_at->format('d/m/Y') }}</small>
 			<p class="fw-600 bold f-20 mb-0">Tanggapan</p>
 			<p class="f-16">Ditanggapi oleh {{ $pengaduan->tanggapan->userResponse->nama }}</p>
-			<p class="py-2 mb-0 f-18">{!! $pengaduan->tanggapan->isi_tanggapan !!}</p>
+			<article class="py-2 mb-0 f-18">{!! $pengaduan->tanggapan->isi_tanggapan !!}</article>
 		</div>
 		@endif
 
