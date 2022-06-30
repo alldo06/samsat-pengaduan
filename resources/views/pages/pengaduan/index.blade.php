@@ -23,7 +23,24 @@
 				</form>
 				@if ($pengaduan->count())
 					@foreach ($pengaduan as $aduan)
-					<div onclick="location.href='/pengaduan/{{ $aduan->id_pengaduan }}'" class="card-pgd py-4 pl-4 my-4">
+					<div onclick="location.href='/pengaduan/{{ $aduan->id_pengaduan }}'" class="card-pgd py-4 px-4 my-4">
+						{{-- <div class="d-flex justify-content-between">
+							<p class="f-18 author">Oleh {{ $aduan->nama }}</p>
+							@if ($aduan->status == 'waiting')
+								<p class="f-16">Status : Belum ditanggapi</p>									
+							@elseif ($aduan->status == 'done')
+								<p class="f-16">Status : Sudah ditanggapi</p>
+							@else
+								<p class="f-16">-</p>
+							@endif
+						</div> --}}
+						@if ($aduan->status == 'waiting')
+							<p class="f-14 text-muted">Status : Belum ditanggapi</p>
+						@elseif ($aduan->status == 'done')
+							<p class="f-14 text-muted">Status : Sudah ditanggapi</p>
+						@else
+							<p class="f-14 text-muted">-</p>
+						@endif
 						<p class="f-18 author">Oleh {{ $aduan->nama }}</p>
 						<p class="substring-card pt-2 mb-1">{!! $aduan->isi !!}</p>
 						<small class="f-14 text-muted">{{ $aduan->created_at->format('d/m/Y') }}</small>

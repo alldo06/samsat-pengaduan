@@ -43,50 +43,20 @@ class TanggapanController extends Controller
 		$validatedData = $request->validate([
 			'pengaduan_id' => 'required',
 			'id_pengaduan' => 'required',
-			'isi_tanggapan' => 'required',
-			'file' => 'file',
-			'file_name' => 'nullable',
-			'file_extension' => 'nullable'
+			'isi_tanggapan' => 'required'
 		]);
 		
-		// if ($request->file('image')) {
-		// 	$validatedData['files'] = $request->file('image')->store('tanggapan-images', 'public');
+		// if ($request->file('file')) {
+		// 	$validatedData['file_name'] = $request->file('file')->getClientOriginalName();
+		// 	$validatedData['file_extension'] = $request->file('file')->getClientOriginalExtension();
+		// 	$validatedData['file'] = $request->file('file')->store('tanggapan-files', 'public');
+		// 	// $validatedData['files'] = $request->file('files')->storeAs('tanggapan-files',$file_name);
 		// }
-		if ($request->file('file')) {
-			$validatedData['file_name'] = $request->file('file')->getClientOriginalName();
-			$validatedData['file_extension'] = $request->file('file')->getClientOriginalExtension();
-			// $validatedData['files'] = $request->file('files')->storeAs('tanggapan-files',$file_name);
-			$validatedData['file'] = $request->file('file')->store('tanggapan-files', 'public');
-		}
 
-	// 	if($request->hasFile('file')) {
-	// 		//get filename with extension
-	// 		$filenamewithextension = $request->file('file')->getClientOriginalName();
-
-	// 		//get filename without extension
-	// 		$filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
-
-	// 		//get file extension
-	// 		$extension = $request->file('file')->getClientOriginalExtension();
-
-	// 		//filename to store
-	// 		$filenametostore = $filename.'_'.time().'.'.$extension;
-
-	// 		//Upload File
-	// 		$request->file('file')->storeAs('public/uploads', $filenametostore);
-
-	// 		// you can save image path below in database
-	// 		$path = asset('storage/uploads/'.$filenametostore);
-
-	// 		echo $path;
-  //     exit;
-	//  }
-
-	//  dd($validatedData);
+		$validatedData['user_id'] = auth()->user()->id;
 
 		Tanggapan::create($validatedData);
 
-		// return redirect('/dashboard/pengaduan');
 		return back();
 	}
 
