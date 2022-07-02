@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
+use PDF;
 use Illuminate\Http\Request;
 
 class DashboardPengaduanController extends Controller
@@ -15,7 +16,7 @@ class DashboardPengaduanController extends Controller
 	 */
 	public function index()
 	{
-		$pengaduans = Pengaduan::with('tanggapan')->sortable()->latest()->paginate(8);
+		$pengaduans = Pengaduan::with('tanggapan')->sortable()->latest()->paginate(10);
 		// $tanggapans = Tanggapan::all();
 		
 		foreach ($pengaduans as $pengaduan) {
@@ -26,11 +27,18 @@ class DashboardPengaduanController extends Controller
 			}
 		}
 		
-		return view('dashboard.pengaduan.index', [
-			'pengaduans' => $pengaduans
-			// 'tanggapans' => $tanggapans
-		]);
+		return view('dashboard.pengaduan.index', compact('pengaduans'));
 	}
+
+	public function exportPDF()
+		{
+			// $this->index();
+			$pengaduans = Pengaduan::all();
+			// view()->share('pengaduans', $pengaduans);
+			$pdf = PDF::loadView('dashboard.pengaduan.into-pdf', ['pengaduans' => $pengaduans]);
+
+			return $pdf->download('pengaduan.pdf');
+		}
 
 	/**
 	 * Show the form for creating a new resource.

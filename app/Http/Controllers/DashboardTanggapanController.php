@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pengaduan;
 use App\Models\Tanggapan;
+use PDF;
 use Illuminate\Http\Request;
 
 class DashboardTanggapanController extends Controller
@@ -18,6 +19,15 @@ class DashboardTanggapanController extends Controller
         $tanggapans = Tanggapan::sortable()->latest()->paginate(10);
 				return view('dashboard.tanggapan.index', compact('tanggapans'));
     }
+
+		public function exportPDF()
+		{
+			$tanggapans = Tanggapan::all();
+			// view()->share('tanggapans', $tanggapans);
+			$pdf = PDF::loadView('dashboard.tanggapan.into-pdf', ['tanggapans' => $tanggapans]);
+
+			return $pdf->download('tanggapan.pdf');
+		}
 
     /**
      * Show the form for creating a new resource.
