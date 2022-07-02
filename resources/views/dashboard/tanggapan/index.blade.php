@@ -14,8 +14,9 @@
 		
 	<div class="table-responsive table-wrapper">
 		<table class="table table-hover table-data">
-			<caption class="table-caption text-right">
-				<a href="/dashboard/tanggapan/export-tanggapan" class="btn button-red">Export to PDF</a>
+			<caption class="table-caption">
+				<span class="f-18">List</span>
+				<a href="/dashboard/tanggapan/export-tanggapan" class="btn button-red float-right">Export to PDF</a>
 			</caption>
 			<thead>
 				<tr>
