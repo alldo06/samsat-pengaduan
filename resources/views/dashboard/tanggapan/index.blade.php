@@ -14,7 +14,9 @@
 		
 	<div class="table-responsive table-wrapper">
 		<table class="table table-hover table-data">
-			<caption class="table-caption">List</caption>
+			<caption class="table-caption text-right">
+				<a href="/dashboard/tanggapan/export-tanggapan" class="btn button-red">Export to PDF</a>
+			</caption>
 			<thead>
 				<tr>
 					<th scope="col">@sortablelink('isi_tanggapan', 'Isi Tanggapan')</th>

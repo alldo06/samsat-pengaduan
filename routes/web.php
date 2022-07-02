@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardOverviewController;
 use App\Http\Controllers\DashboardPengaduanController;
 use App\Http\Controllers\DashboardTanggapanController;
+use App\Http\Controllers\ExportDataController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\RegisterController;
@@ -83,8 +84,10 @@ Route::post('/logout', [LoginController::class, 'logout']);
 // })->middleware('auth');
 Route::get('/dashboard', [DashboardOverviewController::class, 'index'])->middleware('auth');
 
+Route::get('/dashboard/pengaduan/export-pengaduan', [DashboardPengaduanController::class, 'exportPDF']);
 Route::resource('/dashboard/pengaduan', DashboardPengaduanController::class)->middleware('auth');
 // Route::get('/dashboard/pengaduan/{aduan:id}', TanggapanShowController::class, 'show')->middleware('auth');
+Route::get('/dashboard/tanggapan/export-tanggapan', [DashboardTanggapanController::class, 'exportPDF']);
 Route::resource('/dashboard/tanggapan', DashboardTanggapanController::class)->middleware('auth');
 
 Route::resource('/pengaduan', PengaduanController::class);
