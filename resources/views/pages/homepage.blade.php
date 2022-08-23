@@ -192,19 +192,19 @@
 						</li>
 						<hr />
 						<li>
-							<a href="/jadwal-samling">Samling</a>
+							<a href="/layanan/samsat-keliling">Samling</a>
 						</li>
 						<hr />
 						<li>
-							<a href="/jadwal-samdong">Samdong</a>
+							<a href="/layanan/samsat-gendong">Samdong</a>
 						</li>
 						<hr />
 						<li>
-							<a href="/jadwal-samkec">Samkec</a>
+							<a href="/layanan/samsat-kecamatan">Samkec</a>
 						</li>
 						<hr />
 						<li>
-							<a href="/jadwal-samades">Samades</a>
+							<a href="/layanan/samsat-desa">Samades</a>
 						</li>
 						<hr />
 						<li>
@@ -212,7 +212,7 @@
 						</li>
 						<hr />
 						<li>
-							<a href="/e-samsat-jabar">E-Samsat</a>
+							<a href="/samsat/e-samsat">E-Samsat</a>
 						</li>
 					</ul>
 				</div>
