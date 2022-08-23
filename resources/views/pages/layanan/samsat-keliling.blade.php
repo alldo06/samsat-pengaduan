@@ -111,10 +111,11 @@
 					</div>
 			</div>
 	</div>
-	<span class="line blue-bg"></span>
+	
+	{{-- <span class="line blue-bg"></span>
 	<div class="sub-header">
 		<h2>Dokumentasi</h2>
-	</div>
+	</div> --}}
 </div>
 		
 @endsection
