@@ -239,6 +239,7 @@
 // FOOTER
 .global-footer {
   position: relative;
+  margin-top: 10px;
 //   bottom: 0;
   width: 100%;
   padding: 25px 60px;
@@ -1348,6 +1349,9 @@
 	}
 }
 
+// @media screen and (min-width: 12) {
+	
+// }
 
 @media screen and (max-width: 1225px) {
 //   .nav {

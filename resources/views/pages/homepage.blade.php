@@ -32,16 +32,16 @@
 		<h1>P3D WILAYAH KAB. INDRAMAYU II HAURGEULIS</h1>
 		<h2 class="h3">"Aja klalen bayar pajak, jeh"</h2>
 	</div>
-	<div class="maskot">
+	{{-- <div class="maskot">
 		<div class="gubernur">
 			<img src="/img/gubernur.png" alt="Gubernur dan Wagub" />
 		</div>
 		<div class="penda">
 			<img src="/img/penda3.png" alt="Maskot Bapenda" />
-			{{-- {/* <img src={kangPenda} alt="" class="aldo" />
-			<img src={buPenda} alt="" class="hani" /> */} --}}
 		</div>
-	</div>
+			{/* <img src={kangPenda} alt="" class="aldo" />
+			<img src={buPenda} alt="" class="hani" /> */}
+	</div> --}}
 	<div class="apps-links">
 		<a
 			href="https://sambara.puslia.jabarprov.go.id/sambara_v2/"
@@ -96,7 +96,7 @@
 				<div class="deskripsi">
 					<h2>E-SAMSAT JABAR</h2>
 					<p>Cara mudah bayar pajak kendaraan online</p>
-					<a href="/e-samsat-jabar" class="button feature-btn">
+					<a href="/samsat/e-samsat" class="button feature-btn">
 						Details
 					</a>
 				</div>
