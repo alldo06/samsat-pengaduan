@@ -96,7 +96,7 @@
 				<div class="deskripsi">
 					<h2>E-SAMSAT JABAR</h2>
 					<p>Cara mudah bayar pajak kendaraan online</p>
-					<a href="/e-samsat-jabar" class="button feature-btn">
+					<a href="/samsat/e-samsat" class="button feature-btn">
 						Details
 					</a>
 				</div>
