@@ -59,10 +59,10 @@
 		</a>
 		<br />
 	</div>
-	<div class="greetings">
+	{{-- <div class="greetings">
 		<img src="/img/gubernur.png" alt="Gubernur dan Wagub" class="gubmobile" />
 		<img src="/img/greeting2.png" alt="" class="pendamobile" />
-	</div>
+	</div> --}}
 	<div class="slog">
 		<h1>
 			<span>BAPENDA</span> BISA JABAR JUARA !
