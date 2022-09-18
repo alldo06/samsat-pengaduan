@@ -6,6 +6,7 @@ use App\Models\Pengaduan;
 use App\Models\Tanggapan;
 use PDF;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class DashboardPengaduanController extends Controller
 {
@@ -106,6 +107,13 @@ class DashboardPengaduanController extends Controller
 	 */
 	public function destroy(Pengaduan $pengaduan)
 	{
-		//
+		
+		if ($pengaduan->image) {
+			Storage::delete($pengaduan->image);
+		}
+
+		Pengaduan::destroy($pengaduan->id);
+
+		return redirect('/dashboard/pengaduan');
 	}
 }

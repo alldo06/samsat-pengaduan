@@ -53,18 +53,15 @@
 								{{ $pengaduan->status }}
 							</span>
 						</td>
-						{{-- <td>
-							<a href="/dashboard/pengaduan/{{ $pengaduan->id }}" class="badge bg-info">
-								<span data-feather="eye">
-							</a>
-							<form action="/dashboard/pengaduan/{{ $pengaduan->idg }}" method="post" class="d-inline">
+						<td>
+							<form action="/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}" method="post" class="d-inline">
 								@method('delete')
 								@csrf
 								<button class="badge bg-danger border-0" onclick="return confirm('Delete this ?')">									
 									<span data-feather="x-circle"></span>
 								</button>
 							</form>
-						</td> --}}
+						</td>
 					</tr>						
 				@endforeach
 			</tbody>
