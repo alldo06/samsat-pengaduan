@@ -23,7 +23,6 @@ class PengaduanController extends Controller
 			if ($pengaduan->tanggapan) {
 				$pengaduan->status = 'done';
 				$pengaduan->save();
-				// dd('hit', $pengaduan->status);
 			}
 		}
 
@@ -69,9 +68,6 @@ class PengaduanController extends Controller
 		}
 
 		$validatedData['id_pengaduan'] = Str::random(30);
-		// $validatedData['id'] = Str::random(40);
-		// dd($request->id);
-		// dd($validatedData);
 		Pengaduan::create($validatedData);
 
 		return redirect('/pengaduan');
