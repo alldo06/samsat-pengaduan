@@ -33,18 +33,18 @@
 			</thead>
 			<tbody>
 				@foreach ($pengaduans as $pengaduan)
-					<tr onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'" class="trc">
-						<td>{{ $pengaduan->nama }}</td>
-						<td>
+					<tr class="trc">
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">{{ $pengaduan->nama }}</td>
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">
 							<span class="substring">
 								{!! $pengaduan->isi !!}
 							</span>
 						</td>
-						<td>{{ $pengaduan->created_at->format('d/m/Y') }}</td>
-						<td>{{ $pengaduan->alamat }}</td>
-						<td>{{ $pengaduan->email }}</td>
-						<td>{{ $pengaduan->nomor_hp }}</td>
-						<td class="text-center">
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">{{ $pengaduan->created_at->format('d/m/Y') }}</td>
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">{{ $pengaduan->alamat }}</td>
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">{{ $pengaduan->email }}</td>
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'">{{ $pengaduan->nomor_hp }}</td>
+						<td onclick="location.href='/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}'" class="text-center">
 							<span @class([
 								'text-uppercase',
 								'status-data-waiting' => $pengaduan->status == 'waiting',
@@ -57,8 +57,7 @@
 							<form action="/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}" method="post" class="d-inline">
 								@method('delete')
 								@csrf
-								<button class="badge bg-danger border-0" onclick="return confirm('Delete this ?')">									
-									<span data-feather="x-circle"></span>
+								<button class="badge bg-danger border-0 fa fa-trash" onclick="return confirm('Delete this ?')">
 								</button>
 							</form>
 						</td>

@@ -24,7 +24,6 @@ class DashboardPengaduanController extends Controller
 			if ($pengaduan->tanggapan) {
 				$pengaduan->status = 'done';
 				$pengaduan->save();
-				// dd('hit', $pengaduan->status);
 			}
 		}
 		
@@ -107,13 +106,15 @@ class DashboardPengaduanController extends Controller
 	 */
 	public function destroy(Pengaduan $pengaduan)
 	{
-		
+		if($pengaduan->tanggapan) {
+			$pengaduan->tanggapan->delete();
+		};
 		if ($pengaduan->image) {
 			Storage::delete($pengaduan->image);
 		}
 
 		Pengaduan::destroy($pengaduan->id);
 
-		return redirect('/dashboard/pengaduan');
+		return redirect('/dashboard/pengaduan')->with('success', 'Data telah dihapus');
 	}
 }
