@@ -52,6 +52,9 @@
 					{{-- <label for="isi_tanggapan" class="form-label f-20 font-weight-bold mb-3">Tanggapan</label>
 					<textarea class="form-control @error('isi_tanggapan') is-invalid @enderror" id="summernote" name="isi_tanggapan" required value="{{ old('isi_tanggapan') }}" rows="5"></textarea> --}}
 					
+					@error('isi_tanggapan')
+						<p class="text-danger">Tanggapan wajib diisi</p>
+					@enderror
 					<input id="isi_tanggapan" type="hidden" name="isi_tanggapan">
 					<trix-editor input="isi_tanggapan"></trix-editor>
 
@@ -88,6 +91,5 @@
 		</div>
 		@endif
 
-		{{-- <a href="/tanggapan/create" class="btn btn-outline-success">Beri tanggapan</a> --}}
 	</div>
 @endsection

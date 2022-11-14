@@ -57,16 +57,16 @@
 						</div>
 					@enderror
 				</div> --}}
+				
 				<div class="mb-3">
 					<label for="isi" class="form-label">Keluhan, Saran, Pertanyaan</label>
+					@error('isi')
+						<p class="text-danger">Keluhan, Saran, Pertanyaan wajib diisi</p>
+					@enderror
 					<input id="isi" type="hidden" name="isi">
 					<trix-editor input="isi"></trix-editor>
-					{{-- <textarea class="form-control @error('isi') is-invalid @enderror" id="isi" name="isi" rows="5" value="{{ old('isi') }}"></textarea> --}}
 				</div>
-				{{-- <div class="mb-3">
-					<label for="image" class="form-label">Default file input example</label>
-					<input class="form-control" type="file" id="image" name="image">
-				</div>				 --}}
+
 				<div class="mb-3">
 					<label for="image" class="form-label ">Gambar</label>
 					<img class="img-preview img-fluid mb-2 col-sm-5">
