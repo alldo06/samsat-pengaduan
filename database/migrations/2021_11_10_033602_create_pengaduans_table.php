@@ -18,7 +18,7 @@ class CreatePengaduansTable extends Migration
 			$table->char('id_pengaduan')->unique();
 			$table->string('nama');
 			$table->string('alamat');
-			$table->string('email')->unique()->nullable();
+			$table->string('email')->nullable();
 			$table->char('nomor_hp');
 			$table->text('isi');
 			$table->time('tanggal')->nullable();

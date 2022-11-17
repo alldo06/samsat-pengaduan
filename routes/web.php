@@ -83,6 +83,7 @@ Route::get('/dashboard', [DashboardOverviewController::class, 'index'])->middlew
 
 Route::get('/dashboard/pengaduan/export-pengaduan', [DashboardPengaduanController::class, 'exportPDF']);
 Route::resource('/dashboard/pengaduan', DashboardPengaduanController::class)->middleware('auth');
+Route::post('/dashboard/pengaduan', [DashboardPengaduanController::class, 'destroy']);
 // Route::get('/dashboard/pengaduan/{aduan:id}', TanggapanShowController::class, 'show')->middleware('auth');
 Route::get('/dashboard/tanggapan/export-tanggapan', [DashboardTanggapanController::class, 'exportPDF']);
 Route::resource('/dashboard/tanggapan', DashboardTanggapanController::class)->middleware('auth');

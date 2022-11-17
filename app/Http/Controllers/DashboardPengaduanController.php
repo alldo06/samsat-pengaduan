@@ -104,17 +104,24 @@ class DashboardPengaduanController extends Controller
 	 * @param  \App\Models\Pengaduan  $pengaduan
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy(Pengaduan $pengaduan)
+	public function destroy(Request $request)
 	{
-		if($pengaduan->tanggapan) {
-			$pengaduan->tanggapan->delete();
-		};
-		if ($pengaduan->image) {
-			Storage::delete($pengaduan->image);
+		// dd(Pengaduan::where('id_pengaduan', $request->idp)->firstOrFail);
+		$pengaduan = Pengaduan::where('id_pengaduan', $request->idp)->firstOrFail();
+		if($pengaduan){
+			// dd($pengaduan->image);
+			if($pengaduan->tanggapan) {
+				$pengaduan->tanggapan->delete();
+			};
+
+			if ($pengaduan->image) {
+				Storage::delete($pengaduan->image);
+			}
+			Pengaduan::destroy($pengaduan->id);
+
+			return redirect('/dashboard/pengaduan')->with('deleted', 'Data telah dihapus');
+		} else {
+			return redirect('/dashboard/pengaduan')->with('failed', 'Data tidak ditemukan');
 		}
-
-		Pengaduan::destroy($pengaduan->id);
-
-		return redirect('/dashboard/pengaduan')->with('success', 'Data telah dihapus');
 	}
 }

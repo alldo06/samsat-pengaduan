@@ -59,7 +59,8 @@ class PengaduanController extends Controller
 			'email' => 'max:255',
 			'nomor_hp' => 'required|numeric',
 			'isi' => 'required|max:1500',
-			'image' => 'image|file|max:1024',
+			// todo set max file image size
+			'image' => 'image|file|max:5120',
 			'sk_agreement' => 'required',
 		]);
 
@@ -70,7 +71,7 @@ class PengaduanController extends Controller
 		$validatedData['id_pengaduan'] = Str::random(30);
 		Pengaduan::create($validatedData);
 
-		return redirect('/pengaduan');
+		return redirect('/pengaduan')->with('success', 'Pengaduan berhasil dibuat');
 	}
 
 	/**
