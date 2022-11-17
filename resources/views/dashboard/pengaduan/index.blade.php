@@ -54,12 +54,7 @@
 							</span>
 						</td>
 						<td>
-							<form action="/dashboard/pengaduan/{{ $pengaduan->id_pengaduan }}" method="post" class="d-inline">
-								@method('delete')
-								@csrf
-								<button class="badge bg-danger border-0 fa fa-trash" onclick="return confirm('Delete this ?')">
-								</button>
-							</form>
+							<a class="badge bg-danger border-0 delete text-light p-2" data-toggle="modal" data-target="#modal-delete" data-id="{{ $pengaduan->id_pengaduan }}"><i style="font-size: 15px" class="fa fa-trash" aria-hidden="true"></i></a>
 						</td>
 					</tr>						
 				@endforeach
@@ -70,6 +65,44 @@
 				</div>
 			</caption>
 		</table>
-	</div>	
+	</div>
+
+	{{-- Modal Delete --}}
+	<div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+		aria-hidden="true">
+			<div class="modal-dialog" role="document">
+					<div class="modal-content">
+							<div class="modal-header">
+									<h5 class="modal-title">Delete Data Pengaduan</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+									</button>
+							</div>
+							<div class="modal-body">
+								<form action="/dashboard/pengaduan" method="post">
+										@csrf
+										{{-- @method('delete') --}}
+										<input type="hidden" id="idp" name="idp">
+										<h5>Are you sure you want to delete this data?</h5>
+								</div>
+								<div class="modal-footer">
+											<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+											<button type="submit" class="btn btn-danger">Yes, Delete</button>
+								</div>
+								</form>
+						</div>
+					</div>
+			</div>
+		</div>
+	
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script>
+		 $(document).on('click','.delete',function(){
+         let id = $(this).attr('data-id');
+         $('#idp').val(id);
+				 let idp = id
+				 console.log(idp);
+    });
+	</script>
 
 @endsection
