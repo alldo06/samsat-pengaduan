@@ -119,7 +119,7 @@ class DashboardPengaduanController extends Controller
 			}
 			Pengaduan::destroy($pengaduan->id);
 
-			return redirect('/dashboard/pengaduan')->with('success', 'Data telah dihapus');
+			return redirect('/dashboard/pengaduan')->with('deleted', 'Data telah dihapus');
 		} else {
 			return redirect('/dashboard/pengaduan')->with('failed', 'Data tidak ditemukan');
 		}

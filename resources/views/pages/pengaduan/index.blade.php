@@ -13,6 +13,16 @@
 			</p>
 			<div class="my-3">
 				<a href="/pengaduan/create" class="btn button-red">Buat Pengaduan</a>
+
+				@if (session()->has('success'))
+				<div id="alert-messages" class="alert alert-success alert-dismissible fade show my-3" role="alert">
+					{{ session('success') }}
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				@endif
+
 				<form action="/pengaduan" class="input-group my-3 searchbar">
 					<div class="form-outline">
 						<input type="text" class="form-control" placeholder="Search . . ." name="search" value="{{ request('search') }}">
@@ -21,6 +31,7 @@
 						<span data-feather="search" class="feather text-white searchbar-icon"></span>
 					</button>
 				</form>
+
 				@if ($pengaduan->count())
 					@foreach ($pengaduan as $aduan)
 					<div onclick="location.href='/pengaduan/{{ $aduan->id_pengaduan }}'" class="card-pgd py-4 px-4 my-4">
@@ -62,6 +73,16 @@
 		</div>
 	</div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script>
+	// $(document).ready(function() {
+	// 	$("#alert-messages").hide();
+	// 	$("#alert-messages").fadeTo(2000, 500).slideUp(500, function() {
+	// 		$("#alert-messages").slideUp(500);
+	// 	});
+	// });
+</script>
 	
 @endsection
 

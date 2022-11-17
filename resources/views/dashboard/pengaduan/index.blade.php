@@ -6,11 +6,23 @@
 		<h1 class="f-24 font-weight-bold title-detail">Pengaduan</h1>
 	</div>   
 
-	{{-- @if (session()->has('success'))
-		<div class="alert alert-success col-lg-12" role="alert">
-			{{ session('success') }}
-		</div>
-	@endif --}}
+	@if (session()->has('deleted'))
+	<div id="alert-messages" class="alert alert-success alert-dismissible fade show" role="alert">
+		<strong>{{ session('deleted') }}</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	@endif
+
+	@if (session()->has('failed'))
+	<div id="alert-messages" class="alert alert-danger alert-dismissible fade show" role="alert">
+		<strong>{{ session('failed') }}</strong>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	@endif
 	
 	<div class="table-responsive table-wrapper">
 		<table class="table table-hover table-data">
@@ -103,6 +115,12 @@
 				 let idp = id
 				 console.log(idp);
     });
+		$(document).ready(function() {
+			$("#alert-messages").hide();
+				$("#alert-messages").fadeTo(2000, 500).slideUp(500, function() {
+					$("#alert-messages").slideUp(500);
+				});
+		});
 	</script>
 
 @endsection
