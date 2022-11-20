@@ -109,11 +109,20 @@
         </button>
       </div>
       <div class="modal-body">
-        Jika Anda menyeteujui Syarat dan Ketentuan ini berarti Anda menyetujui sudah dijadikan bukti sebagai dasar Kami
+				Selamat siang/sore/malam baraya Samsat Haurgeulis.
+				<br />
+				<br />
+				Silahkan buat pengaduan secara resmi dan tertulis melalui website ini. 
+				<br />
+				<br />
+				<ul>
+					<li>Identitas lengkap pembuat/pelapor selain nama akan kami rahasiakan</li>
+					<li>Bersedia dimintain keterangan dan konfirmasi jika dibutuhkan</li>
+					<li>Postingan Anda akan kami simpan dan dijadikan bukti sesuai UU No. 19 Tahun 2016 tentang Perubahan atas UU No. 11 Tahun 2008 tentang Informasi dan Transaksi Elektronik</li>
+				</ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-        {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
       </div>
     </div>
   </div>
