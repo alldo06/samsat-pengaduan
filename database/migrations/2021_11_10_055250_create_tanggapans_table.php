@@ -18,7 +18,6 @@ class CreateTanggapansTable extends Migration
 			$table->foreignId('pengaduan_id');
 			$table->foreignId('user_id');
 			$table->char('id_pengaduan');
-			$table->timestamp('tanggal')->nullable();
 			$table->text('isi_tanggapan');
 			$table->timestamps();
 		});

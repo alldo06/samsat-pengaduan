@@ -21,7 +21,6 @@ class CreatePengaduansTable extends Migration
 			$table->string('email')->nullable();
 			$table->char('nomor_hp');
 			$table->text('isi');
-			$table->time('tanggal')->nullable();
 			$table->string('image')->nullable();
 			$table->string('status')->default('waiting');
 			$table->boolean('sk_agreement')->default(0);
