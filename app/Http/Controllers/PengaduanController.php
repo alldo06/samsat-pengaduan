@@ -50,7 +50,6 @@ class PengaduanController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		// $date = Carbon::now()->format('d/m/Y');
 
 		$validatedData = $request->validate([
 			'id_pengaduan' => 'max:255|unique:pengaduans',
@@ -59,7 +58,6 @@ class PengaduanController extends Controller
 			'email' => 'max:255',
 			'nomor_hp' => 'required|numeric',
 			'isi' => 'required|max:1500',
-			// todo set max file image size
 			'image' => 'image|file|max:5120',
 			'sk_agreement' => 'required',
 		]);
