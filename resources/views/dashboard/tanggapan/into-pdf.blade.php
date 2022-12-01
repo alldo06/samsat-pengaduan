@@ -37,9 +37,6 @@
 
 		<div class="table-responsive table-wrapper">
 			<table class="table table-data table-striped table-bordered">
-				{{-- <caption class="table-caption">
-					Pengaduan
-				</caption> --}}
 				<thead>
 					<tr>
 						{{-- <th scope="col">#</th> --}}

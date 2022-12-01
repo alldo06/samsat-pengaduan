@@ -37,9 +37,6 @@
 
 		<div class="table-responsive table-wrapper">
 			<table class="table table-data table-striped table-bordered">
-				{{-- <caption class="table-caption">
-					Pengaduan
-				</caption> --}}
 				<thead>
 					<tr>
 						{{-- <th scope="col">#</th> --}}
@@ -50,7 +47,6 @@
 						<th scope="col">Email</th>
 						<th scope="col">No. Telp.</th>
 						<th class="text-center" scope="col">Status</th>
-						{{-- <th scope="col">Action</th>  --}}
 					</tr>
 				</thead>
 				<tbody>
@@ -75,18 +71,6 @@
 									{{ $pengaduan->status }}
 								</span>
 							</td>
-							{{-- <td>
-								<a href="/dashboard/pengaduan/{{ $pengaduan->id }}" class="badge bg-info">
-									<span data-feather="eye">
-								</a>
-								<form action="/dashboard/pengaduan/{{ $pengaduan->idg }}" method="post" class="d-inline">
-									@method('delete')
-									@csrf
-									<button class="badge bg-danger border-0" onclick="return confirm('Delete this ?')">									
-										<span data-feather="x-circle"></span>
-									</button>
-								</form>
-							</td> --}}
 						</tr>						
 					@endforeach
 				</tbody>
