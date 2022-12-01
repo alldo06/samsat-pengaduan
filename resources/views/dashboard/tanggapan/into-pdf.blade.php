@@ -8,18 +8,43 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="/css/dashboard.css" rel="stylesheet">
     <link href="/css/global-css.css" rel="stylesheet">
+
+		
+    <style>
+			th {
+					background: #bf0707;
+					color: white;
+					font-weight: bold;
+			}
+
+			td,
+			th {
+					padding: 10px;
+					border: 1px solid #ccc;
+					text-align: left;
+					font-size: 18px;
+			}
+
+
+	</style>
   </head>
   <body>
+
+		<div class="">
+				<img src="{{ public_path('/img/logo-humas-samsat-hgl.png') }}" style="display: block; margin-left: auto; margin-right: auto;" width="159px" alt="logo">
+				<p style="font-size: 32px; font-weight: bold; text-align: center;">Data Pengaduan</p>
+		</div>
+
 		<div class="table-responsive table-wrapper">
-			<table class="table table-hover table-data">
-				<caption class="table-caption">
-					Tanggapan
-				</caption>
+			<table class="table table-data table-striped table-bordered">
+				{{-- <caption class="table-caption">
+					Pengaduan
+				</caption> --}}
 				<thead>
 					<tr>
+						{{-- <th scope="col">#</th> --}}
 						<th scope="col">Isi Tanggapan</th>
 						<th scope="col">Tanggal</th>
-						{{-- <th scope="col">Action</th> --}}
 					</tr>
 				</thead>
 				<tbody>
@@ -31,18 +56,6 @@
 								</span>
 							</td>
 							<td>{{ $tanggapan->created_at->format('d/m/Y') }}</td>
-							{{-- <td>
-								<a href="/dashboard/pengaduan/{{ $tanggapan->pengaduan_id }}" class="badge bg-info">
-									<span data-feather="eye">
-								</a>
-								<form action="/dashboard/tanggapan/{{ $tanggapan->idg }}" method="post" class="d-inline">
-									@method('delete')
-									@csrf
-									<button class="badge bg-danger border-0" onclick="return confirm('Delete this ?')">									
-										<span data-feather="x-circle"></span>
-									</button>
-								</form>
-							</td> --}}
 						</tr>						
 					@endforeach
 				</tbody>

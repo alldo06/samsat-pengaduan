@@ -24,7 +24,7 @@ class DashboardTanggapanController extends Controller
 		{
 			$tanggapans = Tanggapan::all();
 			// view()->share('tanggapans', $tanggapans);
-			$pdf = PDF::loadView('dashboard.tanggapan.into-pdf', ['tanggapans' => $tanggapans]);
+			$pdf = PDF::loadView('dashboard.tanggapan.into-pdf', ['tanggapans' => $tanggapans])->setPaper('legal', 'landscape');
 
 			return $pdf->download('tanggapan.pdf');
 		}
