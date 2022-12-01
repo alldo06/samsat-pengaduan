@@ -32,7 +32,7 @@
 
 		<div class="">
 				<img src="{{ public_path('/img/logo-humas-samsat-hgl.png') }}" style="display: block; margin-left: auto; margin-right: auto;" width="159px" alt="logo">
-				<p style="font-size: 32px; font-weight: bold; text-align: center;">Data Pengaduan</p>
+				<p style="font-size: 32px; font-weight: bold; text-align: center;">Data Tanggapan</p>
 		</div>
 
 		<div class="table-responsive table-wrapper">
