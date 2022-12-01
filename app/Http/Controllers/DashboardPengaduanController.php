@@ -35,7 +35,7 @@ class DashboardPengaduanController extends Controller
 			// $this->index();
 			$pengaduans = Pengaduan::all();
 			// view()->share('pengaduans', $pengaduans);
-			$pdf = PDF::loadView('dashboard.pengaduan.into-pdf', ['pengaduans' => $pengaduans]);
+			$pdf = PDF::loadView('dashboard.pengaduan.into-pdf', ['pengaduans' => $pengaduans])->setPaper('legal', 'landscape');
 
 			return $pdf->download('pengaduan.pdf');
 		}
