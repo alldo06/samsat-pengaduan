@@ -8,13 +8,38 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="/css/dashboard.css" rel="stylesheet">
     <link href="/css/global-css.css" rel="stylesheet">
+
+		
+    <style>
+			th {
+					background: #bf0707;
+					color: white;
+					font-weight: bold;
+			}
+
+			td,
+			th {
+					padding: 10px;
+					border: 1px solid #ccc;
+					text-align: left;
+					font-size: 18px;
+			}
+
+
+	</style>
   </head>
   <body>
+
+		<div class="">
+				<img src="{{ public_path('/img/logo-humas-samsat-hgl.png') }}" style="display: block; margin-left: auto; margin-right: auto;" width="159px" alt="logo">
+				<p style="font-size: 32px; font-weight: bold; text-align: center;">Data Pengaduan</p>
+		</div>
+
 		<div class="table-responsive table-wrapper">
-			<table class="table table-hover table-data">
-				<caption class="table-caption">
+			<table class="table table-data table-striped table-bordered">
+				{{-- <caption class="table-caption">
 					Pengaduan
-				</caption>
+				</caption> --}}
 				<thead>
 					<tr>
 						{{-- <th scope="col">#</th> --}}
@@ -65,11 +90,6 @@
 						</tr>						
 					@endforeach
 				</tbody>
-				{{-- <caption class="p-0">					
-					<div class="d-flex justify-content-end table-pagination">
-						{{ $pengaduans->appends(request()->except('page'))->links() }}
-					</div>
-				</caption> --}}
 			</table>
 		</div>
 <!-- Optional JavaScript -->
