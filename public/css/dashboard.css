@@ -38,6 +38,15 @@ body {
   padding: 0 20px 45px;
 }
 
+.box-overview:hover {
+  border-color: #bf0707;
+  color: #bf0707;
+}
+
+.box-overview:hover .box-overview-header {
+  color: #bf0707;
+}
+
 .table-wrapper {
   border-radius: 6px;
   border: 1px solid #DFE0EB;
