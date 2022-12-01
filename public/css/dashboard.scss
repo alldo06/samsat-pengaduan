@@ -32,6 +32,14 @@ body {
 	.box-overview-content {
 		padding: 0 20px 45px;
 	}
+	
+	&:hover {
+		border-color: #bf0707;
+		color: #bf0707;
+		.box-overview-header {
+			color: #bf0707;
+		}
+	}
 }
 
 .table-wrapper {
